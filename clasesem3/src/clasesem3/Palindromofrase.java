@@ -20,7 +20,12 @@ public class Palindromofrase {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese un palindromo");
         String f = entrada.nextLine();
-        String frase = f.replaceAll("[,\\.\\s]+","");
+        String frase = f.replaceAll("[,\\.\\s]+", "")
+                .replaceAll("[áÁ]", "a")
+                .replaceAll("[éÉ]", "e")
+                .replaceAll("[íÍ]", "i")
+                .replaceAll("[óÓ]", "o")
+                .replaceAll("[úÚ]", "u");
         boolean resultado = CompararFrase(frase.toLowerCase());
         System.out.println(resultado);
     }
