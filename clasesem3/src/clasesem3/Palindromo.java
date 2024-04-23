@@ -17,19 +17,17 @@ public class Palindromo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese un palindromo");
-        String frase = entrada.nextLine();
-        boolean resultado = CP(frase.toLowerCase());
+        String palabra ="sometemos";
+        boolean resultado = CompararPalabra(palabra.toLowerCase());
         System.out.println(resultado);
     }
 
-    public static boolean CP(String f) {
+    public static boolean CompararPalabra(String f) {
         if (f.length() == 0 || f.length() == 1) {
             return true;
         }
         if (f.charAt(0) == f.charAt(f.length() - 1)) {
-            return CP(f.substring(1, f.length() - 1));
+            return CompararPalabra(f.substring(1, f.length() - 1));
         }
         return false;
     }

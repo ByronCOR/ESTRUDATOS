@@ -19,9 +19,9 @@ public class Palindromofrase {
         // TODO code application logic heref
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese un palindromo");
-        String frase = entrada.nextLine();
-        String frase1 = frase.replaceAll("[,\\.\\s]+","");
-        boolean resultado = CompararFrase(frase1.toLowerCase());
+        String f = entrada.nextLine();
+        String frase = f.replaceAll("[,\\.\\s]+","");
+        boolean resultado = CompararFrase(frase.toLowerCase());
         System.out.println(resultado);
     }
 
