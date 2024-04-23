@@ -16,20 +16,21 @@ public class Palindromofrase {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic heref
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese un palindromo");
         String frase = entrada.nextLine();
-        boolean resultado = CP(frase.toLowerCase());
+        String frase1 = frase.replaceAll("[,\\.\\s]+","");
+        boolean resultado = CompararFrase(frase1.toLowerCase());
         System.out.println(resultado);
     }
 
-    public static boolean CP(String f) {
+    public static boolean CompararFrase(String f) {
         if (f.length() == 0 || f.length() == 1) {
             return true;
         }
         if (f.charAt(0) == f.charAt(f.length() - 1)) {
-            return CP(f.substring(1, f.length() - 1));
+            return CompararFrase(f.substring(1, f.length() - 1));
         }
         return false;
     }
