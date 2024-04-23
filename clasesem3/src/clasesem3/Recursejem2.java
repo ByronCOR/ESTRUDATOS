@@ -17,31 +17,15 @@ public class Recursejem2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ingrese la base");
-        int b = entrada.nextInt();
-        System.out.println("Ingrese el exponente");
-        int e = entrada.nextInt();
-        int resultado = Obtenerpotencia(b, e);
+
+        int resultado = Obtenersuma(5, 10);
         System.out.println(resultado);
-        int resultado2 = Obtenerpotenciar(b, e);
-        System.out.println(resultado2);
     }
-
-    public static int Obtenerpotencia(int b, int e) {
-        int multi = 1;
-        while (e >= 1) {
-            multi = multi * b;
-            e--;
-        }
-        return multi;
-    }
-
-    public static int Obtenerpotenciar(int b, int e) {
-        if (e == 0) {
-            return 1;
+    public static int Obtenersuma(int n1, int n2) {
+        if (n1 > n2) {
+            return 0;
         } else {
-            return b * Obtenerpotenciar(b, e - 1);
+            return n1 + Obtenersuma(n1+1, n2);
         }
     }
 }
