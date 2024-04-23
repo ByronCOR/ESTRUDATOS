@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class Palindromo {
+public class Palindromofrase {
 
     /**
      * @param args the command line arguments
