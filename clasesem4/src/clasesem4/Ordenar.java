@@ -32,7 +32,6 @@ public class Ordenar {
                     aux = arreglo[j];
                     arreglo[j] = arreglo[j + 1];
                     arreglo[j + 1] = aux;
-
                 }
             }
 
