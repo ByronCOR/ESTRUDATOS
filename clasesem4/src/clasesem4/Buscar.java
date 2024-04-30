@@ -20,7 +20,7 @@ public class Buscar {
         int numero = entrada.nextInt();
         int dato = buscar(arreglo2, numero);
         if (dato == -1) {
-            System.out.println("El numero no fue encrontrado ");
+            System.out.println("El numero no fue encontrado ");
         } else {
             System.out.println("El numero fue encontrado en "
                     + "la posicion[" + dato + "]del arreglo");

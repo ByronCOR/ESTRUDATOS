@@ -15,7 +15,7 @@ public class Eliminar {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
         int[] arreglo2 = {3, 7, 2, 9, 8};
@@ -23,7 +23,7 @@ public class Eliminar {
         int numEliminar = entrada.nextInt();
         int dato = buscar(arreglo2, numEliminar);
         if (dato == -1) {
-            System.out.println("El numero no fue encrontrado ");
+            System.out.println("El numero no fue encontrado ");
         } else {
             eliminar(arreglo2, dato);
 
@@ -50,6 +50,5 @@ public class Eliminar {
         }
         System.out.println(acumulador);
     }
-
+    
 }
-
