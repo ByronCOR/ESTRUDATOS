@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class ejecicio1 {
+public class Buscar {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -28,15 +28,12 @@ public class ejecicio1 {
     }
 
     public static int buscar(int[] num, int dato) {
-        int v = 0;
-        for (int i = 0; i < num.length; i++) {
-            if (num[i] == dato) {
-                v = i;
-            } else {
-                v = -1;
-            }
-return v;
-      
-        
+        int indice =-1;
+            for (int i = 0; i < num.length; i++) {
+                if (num[i]==dato) {
+                    indice=i;
+                }
+        }
+       return indice ;
     }
 }

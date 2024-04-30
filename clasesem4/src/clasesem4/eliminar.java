@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class eliminar {
+public class Eliminar {
 
     /**
      * @param args the command line arguments
@@ -26,31 +26,30 @@ public class eliminar {
             System.out.println("El numero no fue encrontrado ");
         } else {
             eliminar(arreglo2, dato);
-            System.out.println("El numero fue encontrado en "
-                    + "la posicion[" + dato + "]del arreglo");
+
         }
     }
 
     public static int buscar(int[] num, int dato) {
+        int indice = -1;
         for (int i = 0; i < num.length; i++) {
             if (num[i] == dato) {
-                return i;
+                indice = i;
             }
-            return buscar
         }
-        return 2;
+        return indice;
     }
 
     public static void eliminar(int[] num, int dato) {
-        if (dato != -1) {
-
-            for (int i = dato; i < num.length; i++) {
-                {
-                    num[i] = num[i + 1];
-
-                }
-                num[i] = 0;
-            }
+        String acumulador = "";
+        num[dato] = 0;
+        System.out.println("El numero que fue encontrado en "
+                + "la posicion[" + dato + "] del arreglo fue eliminado");
+        for (int i = 0; i < num.length; i++) {
+            acumulador = String.format("%s %s",acumulador, num[i]);
         }
+        System.out.println(acumulador);
     }
+
 }
+
