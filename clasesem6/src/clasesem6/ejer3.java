@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class ejer3 {
+public class Ejer3 {
 
     /**
      * @param args the command line arguments
@@ -22,6 +22,9 @@ public class ejer3 {
         int filas = entrada.nextInt();
         System.out.println("INGRESE EL NUMERO DE COLUMNAS");
         int columnas = entrada.nextInt();
+        String cadena1 = "";
+        String cadena2 = "";
+        String cadena3 = "";
         int[][] arregloA = new int[filas][columnas];
         int[][] arregloB = new int[filas][columnas];
         int[][] arregloC = new int[filas][columnas];
@@ -30,18 +33,20 @@ public class ejer3 {
         arregloC = sumaArreglo(arregloA, arregloB, arregloC);
 
         for (int f = 0; f < arregloC.length; f++) {
-            String cadena1 = "";
-            String cadena2 = "";
-            String cadena3 = "";
+
             for (int c = 0; c < arregloC[f].length; c++) {
                 cadena1 = String.format("%s %s ", cadena1, arregloA[f][c]);
                 cadena2 = String.format("%s %s ", cadena2, arregloB[f][c]);
                 cadena3 = String.format("%s %s ", cadena3, arregloC[f][c]);
             }
-            System.out.printf("%s\n", cadena1);
-            System.out.printf("%s\n", cadena2);
-            System.out.printf("%s\n", cadena3);
+            cadena1 = String.format("%s\n", cadena1);
+            cadena2 = String.format("%s\n", cadena2);
+            cadena3 = String.format("%s\n", cadena3);
+
         }
+        System.out.printf("\n%s\n", cadena1);
+        System.out.printf("%s\n", cadena2);
+        System.out.printf("%s\n", cadena3);
     }
 
     public static int[][] datosArregloA(int[][] a) {

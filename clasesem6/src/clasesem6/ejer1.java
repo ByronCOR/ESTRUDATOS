@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author utpl
  */
-public class ejer1 {
+public class Ejer1 {
 
     /**
      * @param args the command line arguments
