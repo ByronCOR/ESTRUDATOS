@@ -14,6 +14,7 @@ public class ArbolBinario {
 
 
 private void insertar(int valor){
+    Nodo root= null;
 raiz= insertarArbol(raiz,valor);
 }
 
@@ -22,36 +23,42 @@ private int findSmallestValue(Node root){
 return root.left === null ? root.values: find SmallestValue(root.left);
 }
 public void delete(int value){
-root= deleteRecursive(root,value);
+root= deleteRecursive(root,valor);
 }
 
 
-private Node deleteRecursive (Node current,int value){
+private Nodo deleteRecursive (Nodo current,int valor){
             if (current==null) {
                 return null;               
             }
             
-             if (value==current.value) {
+             if (valor==current.valor) {
                  
-                  if (current.left==null && current.rigth==null) {
+                  if (current.izquierda ==null && current.derecha==null) {
                 return null;             
             }
-                     if (current.rigth==null) {
-                return current.left ;             
+                     if (current.derecha==null) {
+                return current.izquierda ;             
             }
-                          if (current.left==null) {
-                return current.rigth;             
+                          if (current.izquierda==null) {
+                return current.derecha;             
             }
                           
-                          int smallestValue= findSmallestValue(current.rigth);
-                          current.value=smallestValue;
-                          current.rigth=deleteRecursive(current.rigth,smallestValue);
+                          int smallestValue= findSmallestValue(current.derecha);
+                          current.valor=smallestValue;
+                          current.derecha=deleteRecursive(current.derecha,smallestValue);
                           return current;
             }
-             if (value<corrent.value) {
-                 current.left= deleteRecursive(current.left,value)
-        
+                
+             if (valor<current.valor) {
+                 current.izquierda= deleteRecursive(current.izquierda,valor);
+                 return current;        
     }
+                    
+                 current.derecha= deleteRecursive(current.derecha,valor);
+                 return current;        
+    
+             
             
 }
 }
