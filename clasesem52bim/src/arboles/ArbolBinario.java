@@ -11,7 +11,7 @@ package arboles;
 public class ArbolBinario {
 
     Nodo raiz= null;
-    public void inserta(int valor){
+    public void insertar(int valor){
     raiz = insertarRecusividad(raiz,valor);
     }
 
