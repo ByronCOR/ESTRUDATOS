@@ -12,6 +12,16 @@ import java.util.Scanner;
  * @author utpl
  */
 public class Nodo {
+     int valor;
+    Nodo izquierda;
+    Nodo derecha;
+    
+    public Nodo(int va){
+    valor = va;
+    izquierda = null;
+    derecha = null;
+    
+    }
 }
 
-}
+
