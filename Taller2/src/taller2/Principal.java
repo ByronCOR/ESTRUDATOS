@@ -60,5 +60,45 @@ public class Principal {
             }
         }
     }
+ private int encontrarCargo(Nodo raiz) {
+        return raiz.izquierda == null ? raiz.cargo : encontrarCargo(raiz.izquierda);
+    }
+
+    public void buscar(int cargo) {
+        raiz = buscarRecursivo(raiz, cargo);
+    }
+
+    private Nodo buscarRecursivo(Nodo current,String cargo) {
+        if (current == null) {
+            return null;
+        }
+
+        if (valor == current.valor) {
+
+            if (current.izquierda == null && current.derecha == null) {
+                return ;
+            }
+            if (current.derecha == null) {
+                return current.izquierda;
+            }
+            if (current.izquierda == null) {
+                return current.derecha;
+            }
+
+            int encoCargo = encontrarCargo(current.derecha);
+            current.valor = smallestValue;
+            current.derecha = deleteRecursive(current.derecha, smallestValue);
+            return current;
+        }
+
+        if (valor < current.valor) {
+            current.izquierda = deleteRecursive(current.izquierda, valor);
+            return current;
+        }
+
+        current.derecha = deleteRecursive(current.derecha, valor);
+        return current;
+
+    }
 
 }

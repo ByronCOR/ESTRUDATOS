@@ -4,24 +4,27 @@
  */
 package arboles;
 
-import clasesem6.*;
-import java.util.Scanner;
+
 
 /**
  *
  * @author utpl
  */
 public class Nodo {
-     int valor;
+    String cargo; 
+    int cod;
     Nodo izquierda;
     Nodo derecha;
     
-    public Nodo(int va){
-    valor = va;
+    public Nodo(int va,String c){
+    cod = va;
+    cargo = c;
     izquierda = null;
     derecha = null;
     
     }
+
 }
+
 
 
