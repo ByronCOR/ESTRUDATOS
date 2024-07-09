@@ -1,64 +1,144 @@
-  public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        System.out.println(""
-                + "1:Ingresar los cargos\n"
-                + "2:Buscar cargo"
-                + "3: Mostrar");
-        int opcion = entrada.nextInt();
-         ArbolBinario a = new ArbolBinario();
-        if (opcion == 1) {
-            System.out.println("CARGOS\n"
-                    + "1:Gerencia\n"
-                    + "2:Coordinador"
-                    + "3: Asistente");
-            int num = entrada.nextInt();
-            String cargo;
+class Nodo {
+    int clave;
+    String cargo;
+    Nodo izquierdo;
+    Nodo derecho;
 
-            int contador = 1;
-           
-            if (num == 1 && contador < 2) {
-                cargo = "Gerencia";
-                a.insertar(10, cargo);
-                contador++;
-            } else {
-                if (num == 2 && contador > 1 && contador < 4) {
-                    cargo = "Cordinador\nZona ";
-                    if (contador == 2) {
-                        a.insertar(8, cargo + "1");
-                    } else {
-                        if (contador == 3) {
+    public Nodo(int clave, String cargo) {
+        this.clave = clave;
+        this.cargo = cargo;
+        izquierdo = derecho = null;
+    }
+}
+class ArbolBinario {
+    Nodo raiz;
+
+    public ArbolBinario() {
+        raiz = null;
+    }
+
+    // Método para insertar un nodo en el árbol
+    public void insertar(int clave, String cargo) {
+        raiz = insertarRec(raiz, clave, cargo);
+    }
+
+    private Nodo insertarRec(Nodo raiz, int clave, String cargo) {
+        if (raiz == null) {
+            raiz = new Nodo(clave, cargo);
+            return raiz;
+        }
+        if (clave < raiz.clave) {
+            raiz.izquierdo = insertarRec(raiz.izquierdo, clave, cargo);
+        } else if (clave > raiz.clave) {
+            raiz.derecho = insertarRec(raiz.derecho, clave, cargo);
+        }
+        return raiz;
+    }
+
+    // Método para buscar un nodo en el árbol
+    public boolean buscar(int clave) {
+        return buscarRec(raiz, clave);
+    }
+
+    private boolean buscarRec(Nodo raiz, int clave) {
+        if (raiz == null) {
+            return false;
+        }
+        if (raiz.clave == clave) {
+            return true;
+        }
+        if (clave < raiz.clave) {
+            return buscarRec(raiz.izquierdo, clave);
+        }
+        return buscarRec(raiz.derecho, clave);
+    }
+
+    // Método para mostrar los nodos en orden (InOrden)
+    public void recorridoEnOrden() {
+        recorridoEnOrdenRec(raiz);
+    }
+
+    private void recorridoEnOrdenRec(Nodo raiz) {
+        if (raiz != null) {
+            recorridoEnOrdenRec(raiz.izquierdo);
+            System.out.println(raiz.cargo);
+            recorridoEnOrdenRec(raiz.derecho);
+        }
+    }
+}
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        ArbolBinario a = new ArbolBinario();
+        int contador = 1;
+        
+        while (true) {
+            System.out.println(""
+                + "1: Ingresar los cargos\n"
+                + "2: Buscar cargo\n"
+                + "3: Mostrar\n"
+                + "4: Salir");
+            int opcion = entrada.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    System.out.println("CARGOS\n"
+                        + "1: Gerencia\n"
+                        + "2: Coordinador\n"
+                        + "3: Asistente");
+                    int num = entrada.nextInt();
+                    String cargo;
+
+                    if (num == 1 && contador == 1) {
+                        cargo = "Gerencia";
+                        a.insertar(10, cargo);
+                        contador++;
+                    } else if (num == 2 && contador > 1 && contador < 4) {
+                        cargo = "Coordinador\nZona ";
+                        if (contador == 2) {
+                            a.insertar(8, cargo + "1");
+                        } else if (contador == 3) {
                             a.insertar(13, cargo + "2");
                         }
-                    }
-                    contador++;
-                } else if (num == 3 && contador > 3 && contador < 8) {
-                    cargo = "Asistente ";
-                    if (contador == 4) {
-                        a.insertar(6, cargo + "1");
-                    } else {
-                        if (contador == 5) {
-                            a.insertar(9, cargo);
-                        } else {
-                            if (contador == 6) {
-                                a.insertar(12, cargo);
-                            } else {
-                                if (contador == 7) {
-                                    a.insertar(14, cargo);
-                                }
-                            }
+                        contador++;
+                    } else if (num == 3 && contador >= 4 && contador < 8) {
+                        cargo = "Asistente ";
+                        if (contador == 4) {
+                            a.insertar(6, cargo + "1");
+                        } else if (contador == 5) {
+                            a.insertar(9, cargo + "2");
+                        } else if (contador == 6) {
+                            a.insertar(12, cargo + "3");
+                        } else if (contador == 7) {
+                            a.insertar(14, cargo + "4");
                         }
+                        contador++;
+                    } else {
+                        System.out.println("No es posible insertar más cargos.");
                     }
-                    contador++;
-                }
-
-            }
-        } else {
-            if (opcion == 2) {
-            } else {
-                if (opcion == 3) {
-                    Nodo ;
+                    break;
+                case 2:
+                    System.out.print("Ingrese la clave del cargo a buscar: ");
+                    int clave = entrada.nextInt();
+                    if (a.buscar(clave)) {
+                        System.out.println("Cargo encontrado.");
+                    } else {
+                        System.out.println("Cargo no encontrado.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Cargos en InOrden:");
                     a.recorridoEnOrden();
-                }
+                    break;
+                case 4:
+                    System.out.println("Saliendo del programa.");
+                    entrada.close();
+                    return;
+                default:
+                    System.out.println("Opción no válida.");
             }
         }
     }
+}
