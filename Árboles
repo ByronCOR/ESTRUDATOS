@@ -1,106 +1,64 @@
-class ABB {
-    Nodo raiz;
+  public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println(""
+                + "1:Ingresar los cargos\n"
+                + "2:Buscar cargo"
+                + "3: Mostrar");
+        int opcion = entrada.nextInt();
+         ArbolBinario a = new ArbolBinario();
+        if (opcion == 1) {
+            System.out.println("CARGOS\n"
+                    + "1:Gerencia\n"
+                    + "2:Coordinador"
+                    + "3: Asistente");
+            int num = entrada.nextInt();
+            String cargo;
 
-    public ABB() {
-        raiz = null;
-    }
-
-    // Método para insertar un cargo en el árbol
-    public void insertar(String cargo) {
-        raiz = insertarRec(raiz, cargo);
-    }
-
-    private Nodo insertarRec(Nodo raiz, String cargo) {
-        if (raiz == null) {
-            raiz = new Nodo(cargo);
-            return raiz;
-        }
-        if (cargo.compareTo(raiz.cargo) < 0) {
-            raiz.izquierdo = insertarRec(raiz.izquierdo, cargo);
-        } else if (cargo.compareTo(raiz.cargo) > 0) {
-            raiz.derecho = insertarRec(raiz.derecho, cargo);
-        }
-        return raiz;
-    }
-
-    // Método para buscar un cargo en el árbol
-    public boolean buscar(String cargo) {
-        return buscarRec(raiz, cargo) != null;
-    }
-
-    private Nodo buscarRec(Nodo raiz, String cargo) {
-        if (raiz == null || raiz.cargo.equals(cargo)) {
-            return raiz;
-        }
-        if (cargo.compareTo(raiz.cargo) < 0) {
-            return buscarRec(raiz.izquierdo, cargo);
-        }
-        return buscarRec(raiz.derecho, cargo);
-    }
-
-    // Método para mostrar los cargos en orden (InOrden)
-    public void inOrden() {
-        inOrdenRec(raiz);
-    }
-
-    private void inOrdenRec(Nodo raiz) {
-        if (raiz != null) {
-            inOrdenRec(raiz.izquierdo);
-            System.out.println(raiz.cargo);
-            inOrdenRec(raiz.derecho);
-        }
-    }
-}
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ABB arbol = new ABB();
-        
-        // Insertar los cargos de acuerdo a una jerarquía laboral
-        String[] cargos = {"CEO", "CTO", "CFO", "Manager", "Engineer", "Intern"};
-        for (String cargo : cargos) {
-            arbol.insertar(cargo);
-        }
-        
-        while (true) {
-            System.out.println("\nMenú:");
-            System.out.println("1. Insertar un cargo");
-            System.out.println("2. Buscar un cargo");
-            System.out.println("3. Mostrar los cargos en InOrden");
-            System.out.println("4. Salir");
-            System.out.print("Seleccione una opción: ");
-            int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consumir nueva línea
-
-            switch (opcion) {
-                case 1:
-                    System.out.print("Ingrese el cargo a insertar: ");
-                    String nuevoCargo = scanner.nextLine();
-                    arbol.insertar(nuevoCargo);
-                    System.out.println("Cargo insertado.");
-                    break;
-                case 2:
-                    System.out.print("Ingrese el cargo a buscar: ");
-                    String buscarCargo = scanner.nextLine();
-                    if (arbol.buscar(buscarCargo)) {
-                        System.out.println("Cargo encontrado.");
+            int contador = 1;
+           
+            if (num == 1 && contador < 2) {
+                cargo = "Gerencia";
+                a.insertar(10, cargo);
+                contador++;
+            } else {
+                if (num == 2 && contador > 1 && contador < 4) {
+                    cargo = "Cordinador\nZona ";
+                    if (contador == 2) {
+                        a.insertar(8, cargo + "1");
                     } else {
-                        System.out.println("Cargo no encontrado.");
+                        if (contador == 3) {
+                            a.insertar(13, cargo + "2");
+                        }
                     }
-                    break;
-                case 3:
-                    System.out.println("Cargos en InOrden:");
-                    arbol.inOrden();
-                    break;
-                case 4:
-                    System.out.println("Saliendo del programa.");
-                    scanner.close();
-                    return;
-                default:
-                    System.out.println("Opción no válida.");
+                    contador++;
+                } else if (num == 3 && contador > 3 && contador < 8) {
+                    cargo = "Asistente ";
+                    if (contador == 4) {
+                        a.insertar(6, cargo + "1");
+                    } else {
+                        if (contador == 5) {
+                            a.insertar(9, cargo);
+                        } else {
+                            if (contador == 6) {
+                                a.insertar(12, cargo);
+                            } else {
+                                if (contador == 7) {
+                                    a.insertar(14, cargo);
+                                }
+                            }
+                        }
+                    }
+                    contador++;
+                }
+
+            }
+        } else {
+            if (opcion == 2) {
+            } else {
+                if (opcion == 3) {
+                    Nodo ;
+                    a.recorridoEnOrden();
+                }
             }
         }
     }
-}
