@@ -1,0 +1,6 @@
+relación, tabla, clase de entidades
+estas relaciones están formadas por conjunto de propiedades también llamada atributos columnas, campos (orden no importa)
+en el modelo relacional sele puede llamar tuplas filas, registros entidades
+clave primaria ,PK, clave principal se asegura que cada fila es unica(solo una y pueden ser simple o compuesta)
+clave foránea, FK, foreign key, establece una relación entre la tablas(puede existir muchas en una misma tabla)
+el dominio define los valores permitidos para cada atributo(puede  tener restricciones
