@@ -6,94 +6,56 @@ clave primaria ,PK, clave principal se asegura que cada fila es unica(solo una y
 clave foránea, FK, foreign key, establece una relación entre la tablas(puede existir muchas en una misma tabla)si puede set nulo o pertener a un padre
 el dominio define los valores permitidos para cada atributo(puede  tener restricciones
 
-CREATE TABLE Ventas (
-    Id_ventas INT PRIMARY KEY, 
-    Id_cliente VARCHAR(11) NOT NULL,
-    Nombre VARCHAR(50) NOT NULL, 
-    Direccion VARCHAR(50), 
-    Telefono VARCHAR(40), 
-    Id_producto VARCHAR(20),
-    Fecha DATE, 
-    Cantidad INT,
-    Precio DECIMAL(10, 2) CHECK (Precio > 0)
-CONSTRAINT FK-Cliente FOREIGNKEY (Id_cliente)
-REFERENCES Cliente (Id_cliente
-);
-INSERT INTO Ventas ( Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
- VALUES (1, 001, 'Daniel', 'Calle1' ,0991535307,001,'2024-12-03',2,30000);
- 
- SELECT * FROM Ventas
-
-CREATE TABLE Cliente (
-    Id_cliente  INT PRIMARY KEY, 
-    Nombre VARCHAR(50) NOT NULL, 
-    Direccion VARCHAR(50), 
-    Telefono VARCHAR(40));
-INSERT INTO Cliente ( Id_cliente, Nombre, Direccion, Telefono)
- VALUES (001, 'Daniel', 'Calle1' ,0991535307);
- 
- SELECT * FROM Cliente
-'''''
-CREATE TABLE  Cliente (
-    Id_cliente VARCHAR(11) PRIMARY KEY, 
-    Nombre VARCHAR(50) NOT NULL, 
-    Direccion VARCHAR(50), 
-    Telefono VARCHAR(40)
-    );
-    
-INSERT INTO Cliente ( Id_cliente, Nombre, Direccion, Telefono)
- VALUES ('011', 'Daniel', 'Calle1' ,'0991535307');
- 
- SELECT*FROM Cliente
- 
-CREATE TABLE Ventas (
-    Id_ventas INT PRIMARY KEY, 
-    Id_cliente VARCHAR NOT NULL,
-    Nombre VARCHAR(50) NOT NULL, 
-    Direccion VARCHAR(50), 
-    Telefono VARCHAR(40), 
-    Id_producto VARCHAR(20),
-    Fecha DATE, 
-    Cantidad INT,
-    Precio DECIMAL(10, 2) CHECK (Precio > 0)
-    CONSTRAINT fk_clientes FOREIGN KEY (Id_cliente) REFERENCES Cliente (Id_cliente)
-);
-INSERT INTO Ventas ( Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
- VALUES (1, '001', 'Daniel', 'Calle1' ,'0991535307','001','2024-12-03',2,30000);
- 
- SELECT * FROM Ventas''''
-
 CREATE TABLE Cliente (
     Id_cliente VARCHAR(11) PRIMARY KEY, 
-    Nombre VARCHAR(50) NOT NULL, 
-    Direccion VARCHAR(50), 
-    Telefono VARCHAR(40)
+    Nombre_cliente VARCHAR(50) NOT NULL, 
+    Direccion_cliente VARCHAR(50), 
+    Telefono_cliente VARCHAR(40)
 );
 
-INSERT INTO Cliente (Id_cliente, Nombre, Direccion, Telefono)
-VALUES ('001', 'Daniel', 'Calle1', '0991535307');
-
+INSERT INTO Cliente (Id_cliente, Nombre_cliente, Direccion_cliente, Telefono_cliente)
+VALUES ('001', 'Daniel', 'Calle1', '0997856435'),
+('002', 'Maria', 'Calle2', '0991535307'),
+('003', 'Fernanda', 'Calle3', '0995684935'),
+('004', 'Juan', 'Calle4', '0998143658'),
+('005', 'Josselyn', 'Calle5', '0993857496');
 SELECT * FROM Cliente;
 
+CREATE TABLE Producto (
+Id_producto VARCHAR(11) PRIMARY KEY,
+Nombre_producto VARCHAR(50) NOT NULL,
+Categoria VARCHAR(50) NOT NULL,
+Cantidad_producto INT,
+Precio_unidad DECIMAL(10, 2) CHECK (Precio_unidad > 0)
+);
+
+INSERT INTO Producto (Id_producto, Nombre_producto, Categoria, Cantidad_producto, Precio_unidad)
+VALUES ('584', 'Teléfono Samsung Galaxy','Teléfono', 30, 985),
+('685','Computadora Dell Inspiron','Computadora',25,2564),
+('357', 'Accesorio Anker Power Bank','Accesorio', 90, 600);
+
+SELECT * FROM Producto;
+
+
 CREATE TABLE Ventas (
     Id_ventas INT PRIMARY KEY, 
     Id_cliente VARCHAR(11) NOT NULL,
     Nombre VARCHAR(50) NOT NULL, 
     Direccion VARCHAR(50), 
     Telefono VARCHAR(40), 
-    Id_producto VARCHAR(20),
+    Id_producto VARCHAR(20) NOT NULL,
     Fecha DATE, 
     Cantidad INT,
     Precio DECIMAL(10, 2) CHECK (Precio > 0),
-    CONSTRAINT fk_clientes FOREIGN KEY (Id_cliente)
-        REFERENCES Cliente (Id_cliente)
+    CONSTRAINT FK_clientes FOREIGN KEY (Id_cliente) REFERENCES Cliente (Id_cliente),
+    CONSTRAINT FK_producto FOREIGN KEY(Id_producto) REFERENCES Producto (Id_producto)
 );
 
 INSERT INTO Ventas (Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
-VALUES (1, '001', 'Daniel', 'Calle1', '0991535307', '001', '2024-12-03', 2, 30000);
+VALUES (1, '001', 'Daniel', 'Calle1', '0997856435', '584', '2024-12-03', 2, 1970),
+(2,'002','Maria','Calle2','0991535307','357','2024-03-30',3,1800);
 
 SELECT * FROM Ventas;
-ON DELETE
 
 
 
