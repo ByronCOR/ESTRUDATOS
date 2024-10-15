@@ -1,8 +1,9 @@
+esquema intencion
 relación, tabla, clase de entidades
 estas relaciones están formadas por conjunto de propiedades también llamada atributos columnas, campos (orden no importa)
 en el modelo relacional sele puede llamar tuplas filas, registros entidades
-clave primaria ,PK, clave principal se asegura que cada fila es unica(solo una y pueden ser simple o compuesta)
-clave foránea, FK, foreign key, establece una relación entre la tablas(puede existir muchas en una misma tabla)
+clave primaria ,PK, clave principal se asegura que cada fila es unica(solo una y pueden ser simple o compuesta) NO PUEDESER NULO 
+clave foránea, FK, foreign key, establece una relación entre la tablas(puede existir muchas en una misma tabla)si puede set nulo o pertener a un padre
 el dominio define los valores permitidos para cada atributo(puede  tener restricciones
 
 CREATE TABLE Ventas (
@@ -14,5 +15,85 @@ CREATE TABLE Ventas (
     Id_producto VARCHAR(20),
     Fecha DATE, 
     Cantidad INT,
-    Precio DECIMAL(10, 2) CHECK (Precio > 0)  
+    Precio DECIMAL(10, 2) CHECK (Precio > 0)
+CONSTRAINT FK-Cliente FOREIGNKEY (Id_cliente)
+REFERENCES Cliente (Id_cliente
 );
+INSERT INTO Ventas ( Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
+ VALUES (1, 001, 'Daniel', 'Calle1' ,0991535307,001,'2024-12-03',2,30000);
+ 
+ SELECT * FROM Ventas
+
+CREATE TABLE Cliente (
+    Id_cliente  INT PRIMARY KEY, 
+    Nombre VARCHAR(50) NOT NULL, 
+    Direccion VARCHAR(50), 
+    Telefono VARCHAR(40));
+INSERT INTO Cliente ( Id_cliente, Nombre, Direccion, Telefono)
+ VALUES (001, 'Daniel', 'Calle1' ,0991535307);
+ 
+ SELECT * FROM Cliente
+'''''
+CREATE TABLE  Cliente (
+    Id_cliente VARCHAR(11) PRIMARY KEY, 
+    Nombre VARCHAR(50) NOT NULL, 
+    Direccion VARCHAR(50), 
+    Telefono VARCHAR(40)
+    );
+    
+INSERT INTO Cliente ( Id_cliente, Nombre, Direccion, Telefono)
+ VALUES ('011', 'Daniel', 'Calle1' ,'0991535307');
+ 
+ SELECT*FROM Cliente
+ 
+CREATE TABLE Ventas (
+    Id_ventas INT PRIMARY KEY, 
+    Id_cliente VARCHAR NOT NULL,
+    Nombre VARCHAR(50) NOT NULL, 
+    Direccion VARCHAR(50), 
+    Telefono VARCHAR(40), 
+    Id_producto VARCHAR(20),
+    Fecha DATE, 
+    Cantidad INT,
+    Precio DECIMAL(10, 2) CHECK (Precio > 0)
+    CONSTRAINT fk_clientes FOREIGN KEY (Id_cliente) REFERENCES Cliente (Id_cliente)
+);
+INSERT INTO Ventas ( Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
+ VALUES (1, '001', 'Daniel', 'Calle1' ,'0991535307','001','2024-12-03',2,30000);
+ 
+ SELECT * FROM Ventas''''
+
+CREATE TABLE Cliente (
+    Id_cliente VARCHAR(11) PRIMARY KEY, 
+    Nombre VARCHAR(50) NOT NULL, 
+    Direccion VARCHAR(50), 
+    Telefono VARCHAR(40)
+);
+
+INSERT INTO Cliente (Id_cliente, Nombre, Direccion, Telefono)
+VALUES ('001', 'Daniel', 'Calle1', '0991535307');
+
+SELECT * FROM Cliente;
+
+CREATE TABLE Ventas (
+    Id_ventas INT PRIMARY KEY, 
+    Id_cliente VARCHAR(11) NOT NULL,
+    Nombre VARCHAR(50) NOT NULL, 
+    Direccion VARCHAR(50), 
+    Telefono VARCHAR(40), 
+    Id_producto VARCHAR(20),
+    Fecha DATE, 
+    Cantidad INT,
+    Precio DECIMAL(10, 2) CHECK (Precio > 0),
+    CONSTRAINT fk_clientes FOREIGN KEY (Id_cliente)
+        REFERENCES Cliente (Id_cliente)
+);
+
+INSERT INTO Ventas (Id_ventas, Id_cliente, Nombre, Direccion, Telefono, Id_producto, Fecha, Cantidad, Precio)
+VALUES (1, '001', 'Daniel', 'Calle1', '0991535307', '001', '2024-12-03', 2, 30000);
+
+SELECT * FROM Ventas;
+ON DELETE
+
+
+
