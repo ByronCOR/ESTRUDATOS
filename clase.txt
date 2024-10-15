@@ -57,5 +57,5 @@ VALUES (1, '001', 'Daniel', 'Calle1', '0997856435', '584', '2024-12-03', 2, 1970
 
 SELECT * FROM Ventas;
 
-
+restricioneslistae email
 
