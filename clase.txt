@@ -58,4 +58,15 @@ VALUES (1, '001', 'Daniel', 'Calle1', '0997856435', '584', '2024-12-03', 2, 1970
 SELECT * FROM Ventas;
 
 restricioneslistae email
+los dominios son los valores permitidos
+esquema  es la (intencion)
+el estado the relation es un subconjunto de el plano cartesiano producto de los dominios de los atributos( extension)
+las fila no son ordenadas
+pero una fila es un conjunto de atributos valores ordenados columna.
+valores en la tupla considerados indivisibles.
+las constraints o restricciones son los valores permitidos en la base de datos.
+claves primarias (no admite nulas y no se repite) hsumarle discriminantes(claves compuestas).
+claves foreaneas pueden tener null y valores repetidos.
+cual es la cantidad de discriminates es lael numero de atributos que tenga la tabla
+
 
