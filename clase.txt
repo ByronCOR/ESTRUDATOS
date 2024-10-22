@@ -69,4 +69,35 @@ claves primarias (no admite nulas y no se repite) hsumarle discriminantes(claves
 claves foreaneas pueden tener null y valores repetidos.
 cual es la cantidad de discriminates es lael numero de atributos que tenga la tabla
 
+SELECT Products.CategoryID,
+  COUNT(*) AS "Cantidad de productos",
+  MIN(Price) AS "Precio Minimo",
+  MAX(Price) AS "Precio Maximo",
+  AVG(Price) AS "Precio Promedio"
+FROM Products
+
+SELECT COUNT(Price)
+FROM Products;
+
+SELECT MIN(Price)
+FROM Products;
+
+SELECT MAX(Price)
+FROM Products;
+
+SELECT AVG(Price)
+FROM Products;
+
+SELECT *
+FROM Products
+WHERE  Products.ProductName NOT LIKE 'C%';
+
+SELECT *
+FROM Suppliers
+WHERE Suppliers.ContactName IS NULL;
+
+SELECT *
+FROM Suppliers
+WHERE Suppliers.ContactName IS NOT NULL;
+
 
