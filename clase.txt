@@ -1,3 +1,4 @@
+SEMANA 1
 esquema intencion
 relación, tabla, clase de entidades
 estas relaciones están formadas por conjunto de propiedades también llamada atributos columnas, campos (orden no importa)
@@ -57,6 +58,8 @@ VALUES (1, '001', 'Daniel', 'Calle1', '0997856435', '584', '2024-12-03', 2, 1970
 
 SELECT * FROM Ventas;
 
+SEMANA 2
+
 restricioneslistae email
 los dominios son los valores permitidos
 esquema  es la (intencion)
@@ -69,12 +72,21 @@ claves primarias (no admite nulas y no se repite) hsumarle discriminantes(claves
 claves foreaneas pueden tener null y valores repetidos.
 cual es la cantidad de discriminates es lael numero de atributos que tenga la tabla
 
+SELECT COUNT(*) AS "Cantidad de productos",
+  MIN(Price) AS "Precio Minimo",
+    MAX(Price) AS "Precio Maximo",
+      AVG(Price) AS "Precio Promedio"
+FROM Products
+WHERE Products.SupplierID in(1,2,3)
+GROUP BY Products.CategoryID;
+
 SELECT Products.CategoryID,
   COUNT(*) AS "Cantidad de productos",
   MIN(Price) AS "Precio Minimo",
   MAX(Price) AS "Precio Maximo",
   AVG(Price) AS "Precio Promedio"
 FROM Products
+GROUP BY Products.CategoryID;
 
 SELECT COUNT(Price)
 FROM Products;
