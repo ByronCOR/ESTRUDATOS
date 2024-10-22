@@ -71,6 +71,21 @@ las constraints o restricciones son los valores permitidos en la base de datos.
 claves primarias (no admite nulas y no se repite) hsumarle discriminantes(claves compuestas).
 claves foreaneas pueden tener null y valores repetidos.
 cual es la cantidad de discriminates es lael numero de atributos que tenga la tabla
+cuantos productos se vendi
+SELECT OrderDetails.*, Products.ProductName 
+FROM OrderDetails LEFT JOIN Products
+ ON OrderDetails.ProductID = Products.ProductID
+WHERE OrderID=10248;
+
+SELECT OrderDetails.OrderID, COUNT(OrderDetails.ProductId), SUM(Products.Price*OrderDetails.Quantity) AS Subtotal
+FROM OrderDetails LEFT JOIN Products ON OrderDetails.ProductID = Products.ProductID,
+AND LEFT JOIN Customers ON
+GROUP BY OrderDetails.OrderID;
+
+SELECT OrderDetails.OrderID, COUNT(OrderDetails.ProductId), SUM(Products.Price*OrderDetails.Quantity) AS Subtotal
+FROM OrderDetails LEFT JOIN Products 
+	ON OrderDetails.ProductID = Products.ProductID
+GROUP BY OrderDetails.OrderID;
 
 SELECT COUNT(*) AS "Cantidad de productos",
   MIN(Price) AS "Precio Minimo",
