@@ -167,3 +167,8 @@ INSERT INTO Student(SNN, Name, Major, Bdate)
 VALUES(101,'Emily','Diseño Gráfico','2000-06-03'),
 (102,'Daniel','Medicina','2005-09-15'),
 (103,'Fatima','Enfermeria','1999-02-24');
+
+INSERT INTO Course(Course_C, Cname, Dept)
+VALUES(201,'Phothoshop','Departamento de Artes y Diseño'),
+(202,'Anatomía Humana','Departamento de Medicina '),
+(203,'Anatomía Humana','Departamento de Ciencias de la Salud');
