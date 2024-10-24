@@ -172,3 +172,8 @@ INSERT INTO Course(Course_C, Cname, Dept)
 VALUES(201,'Phothoshop','Departamento de Artes y Diseño'),
 (202,'Anatomía Humana','Departamento de Medicina '),
 (203,'Anatomía Humana','Departamento de Ciencias de la Salud');
+
+INSERT INTO Text_C(Book_ISBN, Book_Title, Publisher, Author)
+VALUES('978-3-16-148410-0','Fundamentos de Diseño Gráfico','Editorial Creativa', 'Ana Martínez'),
+('978-0-13-419044-0','Introducción a la Medicina','Medicina y Salud', 'Dr. Carlos Ruiz'),
+('978-1-59327-889-7','Enfermería: Teoría y Práctica','Salud Global', 'Laura Gómez');
