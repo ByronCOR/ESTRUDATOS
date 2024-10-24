@@ -140,16 +140,6 @@ Course_C INT PRIMARY KEY,
 Cname VARCHAR(50),
 Dept VARCHAR(100)
 );
-CREATE TABLE Enroll(
-SNN INT,
-Course_C INT,
-Quarter_C VARCHAR(50),
-Grade CHAR(1),
-PRIMARY KEY(SNN, Course_C, Quarter_C),
-CONSTRAINT FK_SNN FOREIGN KEY (SNN) REFERENCES Student(SNN),
-CONSTRAINT FK_Course FOREIGN KEY (Course_C) REFERENCES Course(Course_C)
-
-);
 CREATE TABLE Text_C(
 Book_ISBN VARCHAR(100) PRIMARY KEY,
 Book_Title VARCHAR(100),
@@ -161,6 +151,19 @@ Course_C INT,
 Quarter_C VARCHAR(50),
 Book_ISBN VARCHAR(100),
 PRIMARY KEY(Course_C, Quarter_C),
-CONSTRAINT FK_Book FOREIGN KEY (Book_ISBN) REFERENCES Text_C(Book_ISBN),
-CONSTRAINT FK_Quarter FOREIGN KEY (Quarter_C) REFERENCES Enroll(Quarter_C)
+CONSTRAINT FK_Book FOREIGN KEY (Book_ISBN) REFERENCES Text_C(Book_ISBN)
 );
+CREATE TABLE Enroll(
+SNN INT,
+Course_C INT,
+Quarter_C VARCHAR(50),
+Grade CHAR(1),
+PRIMARY KEY(SNN, Course_C, Quarter_C),
+CONSTRAINT FK_SNN FOREIGN KEY (SNN) REFERENCES Student(SNN),
+CONSTRAINT FK_Course FOREIGN KEY (Course_C) REFERENCES Course(Course_C),
+CONSTRAINT FK_Quarter FOREIGN KEY (Course_C ,Quarter_C) REFERENCES Book_Adoption(Course_C ,Quarter_C)
+);
+INSERT INTO Student(SNN, Name, Major, Bdate)
+VALUES(101,'Emily','Diseño Gráfico','2000-06-03'),
+(102,'Daniel','Medicina','2005-09-15'),
+(103,'Fatima','Enfermeria','1999-02-24');
