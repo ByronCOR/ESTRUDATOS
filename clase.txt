@@ -177,3 +177,13 @@ INSERT INTO Text_C(Book_ISBN, Book_Title, Publisher, Author)
 VALUES('978-3-16-148410-0','Fundamentos de Diseño Gráfico','Editorial Creativa', 'Ana Martínez'),
 ('978-0-13-419044-0','Introducción a la Medicina','Medicina y Salud', 'Dr. Carlos Ruiz'),
 ('978-1-59327-889-7','Enfermería: Teoría y Práctica','Salud Global', 'Laura Gómez');
+
+INSERT INTO Book_Adoption(Course_C, Quarter_C, Book_ISBN)
+VALUES(201,'2024-2025','978-3-16-148410-0'),
+(202,'2024-2025','978-0-13-419044-0'),
+(203,'2024-2025','978-1-59327-889-7');
+
+INSERT INTO Enroll(SNN, Course_C, Quarter_C, Grade)
+VALUES(101, 201,'2024-2025','A'),
+(102, 202,'2024-2025','B'),
+(103, 203,'2024-2025','C');
