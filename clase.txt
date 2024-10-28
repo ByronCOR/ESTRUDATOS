@@ -203,3 +203,8 @@ SELECT p.*, s.SupplierName, s.ContactName, s.Phone
 FROM Products p INNER JOIN Suppliers s 
      ON p.SupplierID=s.SupplierID;
 
+SELECT p.*, s.SupplierName, s.ContactName, s.Phone,c.CategoryName
+FROM ((Products p 
+   INNER JOIN Suppliers s ON p.SupplierID=s.SupplierID)
+   INNER JOIN Categories c ON p.CategoryID=c.CategoryID)
+ORDER By c.CategoryName, p.ProductName;
