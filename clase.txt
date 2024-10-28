@@ -222,3 +222,8 @@ ELECT e.*, o.OrderID
 FROM Employees e LEFT JOIN Orders o
 ON e.EmployeeID = o.EmployeeID
 ORDER BY o.OrderID;
+
+SELECT DISTINCT e.EmployeeID, e.LastName, e.FirstName, o.OrderID  
+FROM Employees e RIGHT JOIN Orders o
+ON e.EmployeeID = o.EmployeeID
+ORDER BY e.LastName,e.FirstName;
