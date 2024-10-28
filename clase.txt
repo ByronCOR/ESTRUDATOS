@@ -227,3 +227,26 @@ SELECT DISTINCT e.EmployeeID, e.LastName, e.FirstName, o.OrderID
 FROM Employees e RIGHT JOIN Orders o
 ON e.EmployeeID = o.EmployeeID
 ORDER BY e.LastName,e.FirstName;
+
+SELECT DISTINCT e.EmployeeID, e.LastName, e.FirstName, o.OrderID  
+FROM Employees e LEFT JOIN Orders o ON e.EmployeeID = o.EmployeeID
+ORDER BY e.LastName,e.FirstName
+UNION
+SELECT DISTINCT e.EmployeeID, e.LastName, e.FirstName, o.OrderID  
+FROM Employees e RIGHT JOIN Orders o ON e.EmployeeID = o.EmployeeID
+ORDER BY e.LastName,e.FirstName;
+CUAL ES EL PRODUCTO QUE COMPRO UN PRODUCTO CON EL PRECIO MAS ALTO
+SELECT c.*
+FROM Customers c
+WHERE CustomersID NOT IN (SELECT DISTINCT
+
+SELECT * 
+FROM Products p
+WHERE Price = (SELECT MAX(Price)FROM Products);
+
+cual es laorden de la orden que vendio la mayorcantidad de productos individuales
+
+
+SELECT * 
+FROM  OrderDetails
+WHERE Quantity = (SELECT MAX(	Quantity)FROM OrderDetails);
