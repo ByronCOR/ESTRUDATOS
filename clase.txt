@@ -187,3 +187,15 @@ INSERT INTO Enroll(SNN, Course_C, Quarter_C, Grade)
 VALUES(101, 201,'2024-2025','A'),
 (102, 202,'2024-2025','B'),
 (103, 203,'2024-2025','C');
+
+
+
+SEMANA 3
+SELECT *
+FROM Order o INNER JOIN Customers c
+o.CustomerID + c.CustomerID;
+
+SELECT o.*, c.CustomerNmae, c.Counrr . c.CITY,c.Adress
+FROM Order o INNER JOIN Customers c
+o.CustomerID + c.CustomerID;
+
