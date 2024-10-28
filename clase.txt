@@ -199,3 +199,7 @@ SELECT o.*, c.CustomerNmae, c.Counrr . c.CITY,c.Adress
 FROM Order o INNER JOIN Customers c
 o.CustomerID + c.CustomerID;
 
+SELECT p.*, s.SupplierName, s.ContactName, s.Phone
+FROM Products p INNER JOIN Suppliers s 
+     ON p.SupplierID=s.SupplierID;
+
