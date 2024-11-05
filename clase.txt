@@ -488,3 +488,11 @@ FROM ((Orders o
     INNER JOIN Customers c ON o.CustomerID = c.CustomerID
 GROUP BY c.CustomerID, c.CustomerName, o.OrderID
 ORDER BY 4 DESC ;
+
+SELECT Year(o.OrderDate), Month(o.orderDate), SUM(od.quantity) AS Subtotal
+FROM Orders o INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
+GROUP BY Year(o.OrderDate), Month(o.orderDate)
+;
+Las ventas por meces
+Los meses con mayores/menores ventas
+Los Meses con Ventas mayores/menores que el promedio
