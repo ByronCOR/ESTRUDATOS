@@ -481,3 +481,10 @@ INNER JOIN Products p ON od.ProductID = p.ProductID)
 GROUP BY o.OrderID
 ORDER BY 3 DESC
 ;
+SELECT c.CustomerID, c.CustomerName, o.OrderID, SUM(od.Quantity * p.Price) AS Subtotal
+FROM ((Orders o 
+	INNER JOIN OrderDetails od ON o.OrderId = od.OrderId)
+	INNER JOIN Products p ON od.ProductID = p.ProductID)
+    INNER JOIN Customers c ON o.CustomerID = c.CustomerID
+GROUP BY c.CustomerID, c.CustomerName, o.OrderID
+ORDER BY 4 DESC ;
