@@ -496,3 +496,9 @@ GROUP BY Year(o.OrderDate), Month(o.orderDate)
 Las ventas por meces
 Los meses con mayores/menores ventas
 Los Meses con Ventas mayores/menores que el promedio
+SELECT YEAR(o.OrderDate) AS Año, 
+       MONTH(o.OrderDate) AS Mes, 
+       MAX(od.Quantity) AS Subtotal
+FROM Orders o
+INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
+GROUP BY Year(o.OrderDate), Month(o.OrderDate);
