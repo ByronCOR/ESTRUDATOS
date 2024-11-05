@@ -473,3 +473,11 @@ WHERE precio <400
 /* 35.Devuelve una lista con el nombre de todos los productos que contienen la cadena Monitor en el nombre y tienen un precio inferior a 215 €.*/
 
 /* 36.Lista el nombre y el precio de todos los productos que tengan un precio mayor o igual a 180€. Ordene el resultado en primer lugar por el precio (en orden descendente) y en segundo lugar por el nombre (en orden ascendente).*/
+
+SELECT o.OrderID, COUNT (*) AS Productos, SUM(od.Quantity*p.Price) AS subtotal
+FROM ((Orders o 
+INNER JOIN OrderDetails od ON o.OrderID = od.OrderID)
+INNER JOIN Products p ON od.ProductID = p.ProductID)
+GROUP BY o.OrderID
+ORDER BY 3 DESC
+;
