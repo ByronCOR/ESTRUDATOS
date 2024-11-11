@@ -514,3 +514,14 @@ PROJECT KEEPS CERTAIN COLUMS (ATRIBUTES)FRom a relation and discardas the orher 
 pi <atrtibute list>(R)
 
 https://www.w3schools.com/mysql/exercise.asp
+
+
+•	[1] Realizar una consulta que muestre el nombre de los clientes de Palencia
+ CLIENTES π Nombre(σ Nombre=”  Palencia”(EMPLOYEE))
+
+•	[2] Indicar el código y descripción de los productos cuyo código coincida con su descripción
+PRODUCTO π Cod, Descripción (σ Cod = Descripción ”(EMPLOYEE) )
+
+•	[3] Obtener el nombre de los clientes junto con el identificador de venta y la cantidad vendida, de aquellos productos de los que se vendieron más de 500 unidades
+CLIENTES π Nombre(σ Nombre=”  Palencia”(EMPLOYEE))
+
