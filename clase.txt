@@ -502,3 +502,11 @@ SELECT YEAR(o.OrderDate) AS Año,
 FROM Orders o
 INNER JOIN OrderDetails od ON o.OrderID = od.OrderID
 GROUP BY Year(o.OrderDate), Month(o.OrderDate);
+
+in general , the select operation is donoted by the 
+sigma  <selection condition> (R)wherein general , the select operation is donoted by the 
+sigma  <selection condition> (R)where
+select sigma is commutative el orden de los factores no altera el producto
+puedo anidar varias seleciones
+
+
