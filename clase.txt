@@ -506,7 +506,11 @@ GROUP BY Year(o.OrderDate), Month(o.OrderDate);
 in general , the select operation is donoted by the 
 sigma  <selection condition> (R)wherein general , the select operation is donoted by the 
 sigma  <selection condition> (R)where
-select sigma is commutative el orden de los factores no altera el producto
-puedo anidar varias seleciones
+select  sigma is commutative el orden de los factores no altera el producto
+puedo anidar varias seleciones 
+
+PROJECT KEEPS CERTAIN COLUMS (ATRIBUTES)FRom a relation and discardas the orher columns pi dno () pi evita cualquier fila duplicada duplicados la project no es comutativa
+
+pi <atrtibute list>(R)
 
 
