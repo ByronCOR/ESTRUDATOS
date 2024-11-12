@@ -533,6 +533,13 @@ CLIENTES π Nombre(σ Nombre=”  Palencia”(EMPLOYEE))
 
 π nombre_empleado, calle ciudad (σ sueldo > 10.000(empleado x trabaja) )
 
+3. Determinar el nombre, domicilio y ciudad de residencia de todos los empleados que trabajan en el Banco BANAMEX y ganan más de 10.000
+
+π nombre_empleado, calle ciudad (σ  nombre_empresa = 'Banco BANAMEX' && sueldo > 10.000 (empleado x trabaja) )
+
+4. Determinar el nombre de los jefes con empleados en la ciudad de Xalapa.
+
+π nombre_jefe (σ  ciudad = 'Xalapa'  (jefe x empleado) )
 
 
 
