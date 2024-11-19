@@ -541,7 +541,8 @@ CLIENTES π Nombre(σ Nombre=”  Palencia”(EMPLOYEE))
 
 π nombre_jefe (σ  ciudad = 'Xalapa'  (jefe x empleado) )
 
-
+https://c4model.com/diagrams/container
+https://c4model.com
 
 
 
