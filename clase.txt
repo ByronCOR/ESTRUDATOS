@@ -1,4 +1,4 @@
-SEMANA 1
+noSEMANA 1
 esquema intencion
 relación, tabla, clase de entidades
 estas relaciones están formadas por conjunto de propiedades también llamada atributos columnas, campos (orden no importa)
@@ -545,7 +545,37 @@ https://c4model.com/diagrams/container
 https://c4model.com
 
 
+val nume:List[Int]=List(0,1,2,3,4,5,6,7,8,9)
 
+def nomDigito(n:Int):String= {
+  if (n == 0) "Cero"
+  else if (n == 1) "Uno"
+  else  if (n == 2) "Dos"
+  else  if (n == 3) "Tres"
+  else  if (n == 4) "Cuatro"
+  else  if (n == 5) "Cinco"
+  else  if (n == 6) "Seis"
+  else  if (n == 7) "Siete"
+  else  if (n == 8) "Ocho"
+  else  if (n == 9) "Nueve"
+  else "Error no es un digito"
+}
+
+nume.map(nomDigito(_))
+
+
+case class Estudiante(cedula: String, apellidos: String, nombres: String, edad: Int, peso: Double)
+val listaEs = List(Estudiante("1150017950","Ruiz","Martin",20,74.3),
+                   Estudiante("1234567890","Garcia","Maria",19,50.0),
+                   Estudiante("2343456577","Espina","Roberto",21,80.9),
+                   Estudiante("2343556767","Torres","Karen",19,52.4),
+                   Estudiante("2334334545","Espinoza","Carlos",20,60.1)
+)
+
+listaEs.map(_.edad).sum
+listaEs.map(_.peso).sum
+listaEs.map(_.edad).sum/listaEs.size
+listaEs.map(_.peso).sum/listaEs.size
 
 
 
