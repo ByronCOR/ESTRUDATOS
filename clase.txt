@@ -579,4 +579,10 @@ listaEs.map(_.peso).sum/listaEs.size
 
 
 
+val promedio: Double = ListE.map(_.edad).sum / ListE.size
+val promedioP: Double = ListE.map(_.peso).sum / ListE.size
 
+val mayor: Int = ListE.count(_.edad > promedio)
+val menor: Int = ListE.count(_.edad < promedio)
+val mayor1: Int = ListE.count(_.peso > promedioP)
+val menor1: Int = ListE.count(_.peso < promedioP)
