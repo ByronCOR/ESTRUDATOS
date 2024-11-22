@@ -1,4 +1,4 @@
-noSEMANA 1
+nonoSEMANA 1
 esquema intencion
 relación, tabla, clase de entidades
 estas relaciones están formadas por conjunto de propiedades también llamada atributos columnas, campos (orden no importa)
