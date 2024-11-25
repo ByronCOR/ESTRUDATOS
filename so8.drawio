@@ -1,9 +1,112 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.9.0">
   <diagram name="Página-1" id="xeah7sLJagFgJ3AP-C5m">
-    <mxGraphModel>
+    <mxGraphModel dx="2074" dy="822" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-11" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-51" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-3" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Clientes&lt;/strong&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="118" y="161" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-4" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;direccion_envio&lt;/strong&gt;" style="ellipse;shape=doubleEllipse;margin=3;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="196" y="56" width="143" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-5" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;saldo&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="42" y="257" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-6" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;lim_credito&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="185" y="259" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-8" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Id_cliente&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="18" y="74" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.44;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-17" target="4hjfHTB6GQF3sTCc0Yl3-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-39" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-17" target="4hjfHTB6GQF3sTCc0Yl3-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-48" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-17" target="4hjfHTB6GQF3sTCc0Yl3-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-17" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Artículos&lt;/strong&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="277" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-18" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Id_articulo&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="201" y="333" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-24" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-22" target="4hjfHTB6GQF3sTCc0Yl3-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-47" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-22" target="4hjfHTB6GQF3sTCc0Yl3-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-22" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Fabricas&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-75" y="442" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-23" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Id_f&lt;/strong&gt;&lt;b style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;abricas&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
+          <mxGeometry x="-131" y="346" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-25" value="Relationship" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="91" y="430" width="117" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-37" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150.35533905932743" y="246.14213562373106" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-36" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.53;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="79.64466094067257" y="246.14213562373084" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-38" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;descripcion&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="363" y="333" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-55" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-40" target="4hjfHTB6GQF3sTCc0Yl3-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-56" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-40" target="4hjfHTB6GQF3sTCc0Yl3-54">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-40" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Pedidos&lt;/strong&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="530" y="564" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-41" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 16px;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;b&gt;descuento&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="263" y="161" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-42" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-17" target="4hjfHTB6GQF3sTCc0Yl3-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="459.5" as="sourcePoint" />
+            <mxPoint x="185" y="459.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-43" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="4hjfHTB6GQF3sTCc0Yl3-42">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-45" value="" style="endArrow=none;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="25" y="461.5" as="sourcePoint" />
+            <mxPoint x="92" y="462" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-46" value="N" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="4hjfHTB6GQF3sTCc0Yl3-45">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-53" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;cabecera&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="467" y="480" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-54" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px;&quot;&gt;cuerpo&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="615" y="480" width="100" height="40" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
