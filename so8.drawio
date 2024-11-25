@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="24.9.0">
   <diagram name="Página-1" id="xeah7sLJagFgJ3AP-C5m">
-    <mxGraphModel dx="2074" dy="822" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1834" dy="822" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,9 +24,6 @@
         </mxCell>
         <mxCell id="4hjfHTB6GQF3sTCc0Yl3-8" value="&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: left;&quot;&gt;Id_cliente&lt;/strong&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="18" y="74" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-10" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.44;entryY=0.975;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-8">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4hjfHTB6GQF3sTCc0Yl3-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-17" target="4hjfHTB6GQF3sTCc0Yl3-18">
           <mxGeometry relative="1" as="geometry" />
@@ -106,6 +103,9 @@
         </mxCell>
         <mxCell id="4hjfHTB6GQF3sTCc0Yl3-54" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;strong style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px;&quot;&gt;cuerpo&lt;/strong&gt;&lt;br&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="615" y="480" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4hjfHTB6GQF3sTCc0Yl3-58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.58;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="4hjfHTB6GQF3sTCc0Yl3-3" target="4hjfHTB6GQF3sTCc0Yl3-8">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
