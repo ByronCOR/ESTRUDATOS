@@ -634,3 +634,13 @@ def trasformarNum(p:String):Int={
 }
 
 palabras.map(p=>trasformarNum(p))
+
+
+Se pide listar los tipos de entidades
+•	Clientes:
+•	Artículos:
+•	Pedidos:
+•	Fábricas:
+Por cada tipo de entidad listar los atributos
+•	Clientes: Número de Cliente, varias direcciones de envío, Saldo, límite de crédito, descuento
+
