@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="25.0.3">
   <diagram name="Página-1" id="AHGPUvhiCxzR-PQ16k5C">
-    <mxGraphModel dx="1434" dy="1941" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1505" dy="1406" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -111,6 +111,9 @@
             <mxPoint x="240" y="-190" as="sourcePoint" />
             <mxPoint x="320" y="-190" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-37" value="un libro puede ser escrtito por varios autoresy una autor puedeescribir varionlibros&lt;div&gt;uanrevista es editada por unaeditoria y una editorialpuede editar muchas revistas&amp;nbsp; un autobus puede ser condicido por varios con ductores y un conductor puede conducir varios autovuses un cine tiene muchaws salas de cine y una sala de cine solo pu8ede estar de un cine&lt;/div&gt;&lt;div&gt;en una dsala de cine se realizan muchas proyeccionesde peliculas y cada proyeccion esta asociada a una sala de cine&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-485" y="-815" width="1480" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
