@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="25.0.3">
   <diagram name="Página-1" id="AHGPUvhiCxzR-PQ16k5C">
-    <mxGraphModel dx="1895" dy="5447" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2262" dy="5448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -137,7 +137,7 @@
           <mxGeometry x="570" y="-2740" width="110" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-46" value="Entidades&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Proyecto: Id_proyecto,Nombre,Presupuesto,Fecha_inicio,Fecha_finalizacion&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Empleado: Id_empleado,Nombre,Cargo_principal,Salario&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Oficina:Region,Id_oficina,Nombre,Direccion&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Cliente:Id_cliente,Nombre,Direccion,Contacto&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Entregable:Id_entregable,Nombre,Descripcion,Fecha_entrega&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Equipo:Id_equipo&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Region: Id_region&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Rol:Id_rol&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Supervisores:Id_supervisor&lt;/div&gt;&lt;div&gt;Relaciones&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Un empleado puede ser asignado&amp;nbsp; a múltiples proyectos (N:M)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;un empleado tiene asignado un Rol (1:1)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;cada proyectos tiene un único&amp;nbsp; cliente pero un cliente puede contratar múltiples proyectos (1:M)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;los empleados puede supervisar varios empleados pero no puede supervisar a si mismos&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;un empleado puede tener varios supervisores en diferente proyectos(1:N)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;los proyectos tiene varios entregables pero un entregable solo pertenece aun proyecto(1:N)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;una oficina esta ubicada en una región(1:1)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;cada empleado esta asignado a una oficina(1:1)&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;varios empleados pueden conformar un equipo(N:M)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="414" y="-3510" width="570" height="340" as="geometry" />
+          <mxGeometry x="414" y="-3550" width="570" height="340" as="geometry" />
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-47" target="FphDkbnha6Hn7tpk1yiQ-116">
           <mxGeometry relative="1" as="geometry" />
@@ -206,9 +206,6 @@
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-67" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Entregable&lt;/span&gt;" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="405" y="-2615" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="FphDkbnha6Hn7tpk1yiQ-68" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Id_entregable&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
-          <mxGeometry x="537" y="-2675" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-69" value="Nombre" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="537" y="-2635" width="80" height="30" as="geometry" />
@@ -303,9 +300,9 @@
             <mxPoint x="-10" y="-2782.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FphDkbnha6Hn7tpk1yiQ-89" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-68" target="FphDkbnha6Hn7tpk1yiQ-67">
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-89" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="FphDkbnha6Hn7tpk1yiQ-67">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540" y="-2640" as="sourcePoint" />
+            <mxPoint x="537" y="-2660" as="sourcePoint" />
             <mxPoint x="500" y="-2575" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -361,15 +358,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-101" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Equipo&lt;/span&gt;" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="560" y="-3120" width="100" height="40" as="geometry" />
+          <mxGeometry x="627" y="-3130" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-102" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;Id_equipo&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
-          <mxGeometry x="700" y="-3115" width="80" height="30" as="geometry" />
+          <mxGeometry x="767" y="-3125" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-103" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-102" target="FphDkbnha6Hn7tpk1yiQ-101">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="747" y="-3020" as="sourcePoint" />
-            <mxPoint x="707" y="-3080" as="targetPoint" />
+            <mxPoint x="814" y="-3030" as="sourcePoint" />
+            <mxPoint x="774" y="-3090" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-104" target="FphDkbnha6Hn7tpk1yiQ-116">
@@ -420,15 +417,6 @@
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-119" value="contrata" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="290" y="-2827.5" width="90" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="FphDkbnha6Hn7tpk1yiQ-120" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-119" target="FphDkbnha6Hn7tpk1yiQ-39">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-60" y="-2865" as="sourcePoint" />
-            <mxPoint x="280" y="-2670" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FphDkbnha6Hn7tpk1yiQ-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.289;entryY=0.833;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-64" target="FphDkbnha6Hn7tpk1yiQ-64">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-124" target="FphDkbnha6Hn7tpk1yiQ-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -455,6 +443,30 @@
         </mxCell>
         <mxCell id="FphDkbnha6Hn7tpk1yiQ-134" value="asignado" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="647" y="-2940" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-137" value="conforma" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="505" y="-3140" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-139" value="" style="endArrow=none;html=1;rounded=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-137" target="FphDkbnha6Hn7tpk1yiQ-47">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="624.5" y="-3148" as="sourcePoint" />
+            <mxPoint x="624.5" y="-3090" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-140" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-101" target="FphDkbnha6Hn7tpk1yiQ-137">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="553" y="-3085" as="sourcePoint" />
+            <mxPoint x="490" y="-3022" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-141" value="&lt;span style=&quot;text-wrap: nowrap; text-decoration-line: underline;&quot;&gt;Id_entregable&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="537" y="-2680" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FphDkbnha6Hn7tpk1yiQ-142" value="" style="shape=link;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FphDkbnha6Hn7tpk1yiQ-119" target="FphDkbnha6Hn7tpk1yiQ-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="-2725.5" as="sourcePoint" />
+            <mxPoint x="440" y="-2725.5" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
