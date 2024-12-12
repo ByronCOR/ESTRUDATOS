@@ -644,3 +644,18 @@ Se pide listar los tipos de entidades
 Por cada tipo de entidad listar los atributos
 •	Clientes: Número de Cliente, varias direcciones de envío, Saldo, límite de crédito, descuento
 
+
+//genere una nueva lista con los nobres de la cancion y artista 
+//elementos que nos van ayudarr de forma temproral
+val t:Tuple2[Double,Int] = songs
+  .map(_.duration)
+  .foldLeft((0.0, 0))((acc, currVal) => (acc._1 + currVal, acc._2 + 1))
+val avg = t._1 / t._2
+val l2: List[Tuple2[String,String]]=songs.filter(_.duration>avg)
+  .map(songs=>(songs.name,songs.artistName))
+
+//tambien es una tuppla pero menos eficioanete
+val  tAux:Tuple2[Int, Int]=(songs.map(_.duration).sum,songs.length)
+
+val t3: Tuple3[String, Int, String]=("ecuador",14,"Quito")
+
