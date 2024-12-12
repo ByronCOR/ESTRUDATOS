@@ -653,6 +653,7 @@ val t:Tuple2[Double,Int] = songs
 val avg = t._1 / t._2
 val l2: List[Tuple2[String,String]]=songs.filter(_.duration>avg)
   .map(songs=>(songs.name,songs.artistName))
+l2.sortBy(_._2).sortBy(_._1)
 
 //tambien es una tuppla pero menos eficioanete
 val  tAux:Tuple2[Int, Int]=(songs.map(_.duration).sum,songs.length)
