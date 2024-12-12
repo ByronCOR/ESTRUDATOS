@@ -675,3 +675,6 @@ l2.sortBy(_._2).sortBy(_._1).sortBy(_._3)
 val  tAux:Tuple2[Int, Int]=(songs.map(_.duration).sum,songs.length)
 
 val t3: Tuple3[String, Int, String]=("ecuador",14,"Quito")
+val capitales:Tuple2[(String,String)]=("Ecuador","Quito")
+capitales(0)
+capitales(1)
