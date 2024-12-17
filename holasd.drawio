@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="25.0.3" pages="3">
   <diagram name="Página-1" id="SwvaVbSk8qbzMh4MLZsh">
-    <mxGraphModel dx="2514" dy="908" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1640" dy="875" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -272,29 +272,29 @@
         <mxCell id="IZ7AUGNVp8Lv1O2xWt9p-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Estudiante:&lt;/b&gt; Byron Daniel Córdova Romero&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-790" y="40" width="286" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="scTdqRNmFNwiGthq5X7L-5" value="&lt;b&gt;1&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="scTdqRNmFNwiGthq5X7L-5" value="&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;1&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-807" y="99" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="scTdqRNmFNwiGthq5X7L-6" value="&lt;b&gt;2&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="scTdqRNmFNwiGthq5X7L-6" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;2&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-827" y="1185" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="scTdqRNmFNwiGthq5X7L-7" value="&lt;b&gt;3&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="scTdqRNmFNwiGthq5X7L-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;3&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-819" y="2351" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="W8Hqw3LRs7O8wRte0Ch9-1" value="- Libro (&lt;u&gt;isbn&lt;/u&gt;, título, autor, año_publicación)&lt;br&gt;- Socio (&lt;u&gt;id_socio&lt;/u&gt;, nombre, apellido, email)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-306" y="360" width="261" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="W8Hqw3LRs7O8wRte0Ch9-2" value="- Departamento (&lt;u&gt;id_depto&lt;/u&gt;, nombre_depto)&lt;br&gt;- Profesor (&lt;u&gt;id_profesor&lt;/u&gt;, nombre, apellido, id_depto)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="W8Hqw3LRs7O8wRte0Ch9-2" value="- Departamento (&lt;u&gt;id_depto&lt;/u&gt;, nombre_depto) 1&lt;br&gt;- Profesor (&lt;u&gt;id_profesor&lt;/u&gt;, nombre, apellido, &lt;u&gt;id_depto&lt;/u&gt;) N" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-328.5" y="1404" width="306" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="W8Hqw3LRs7O8wRte0Ch9-3" value="- Estudiante (&lt;u&gt;id_estudiante&lt;/u&gt;, nombre, email)&lt;br&gt;- Curso (&lt;u&gt;id_curso&lt;/u&gt;, nombre_curso, duracion)&lt;br&gt;- Inscripción (&lt;u&gt;id_estudiante&lt;/u&gt;, id_curso, fecha_inscripcion)" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="W8Hqw3LRs7O8wRte0Ch9-3" value="- Estudiante (&lt;u&gt;id_estudiante&lt;/u&gt;, nombre, email)N&lt;br&gt;- Curso (&lt;u&gt;id_curso&lt;/u&gt;, nombre_curso, duracion)M&lt;br&gt;- Inscripción (&lt;u&gt;id_estudiante&lt;/u&gt;, &lt;u&gt;id_curso&lt;/u&gt;, fecha_inscripcion)N:M" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-369" y="2592" width="333" height="63" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="1gPe5nTMlssKDxIDTyjr" name="Página-2">
-    <mxGraphModel dx="3341" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2467" dy="875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -751,8 +751,23 @@
             <mxPoint x="-1120" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WRn_X4_66mEOTo5goDQu-5" value="- Empleado (&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;id_empleado,&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;nombre_completo (nombre, apellido),&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;direccion (calle, ciudad, código_postal),&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;contacto (teléfono, email)&lt;div&gt;&amp;nbsp; &amp;nbsp; id_depto&lt;br&gt;)&lt;br&gt;- Departamento (id_depto, nombre, ubicacion)&lt;p class=&quot;p2&quot; style=&quot;margin: 12px 0px; color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="WRn_X4_66mEOTo5goDQu-5" value="- Empleado (&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;id_empleado,&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;nombre_completo (nombre, apellido),&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;direccion (calle, ciudad, código_postal),&lt;br&gt;&lt;span class=&quot;Apple-converted-space&quot;&gt;&amp;nbsp; &amp;nbsp;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;contacto (teléfono, email)&lt;div&gt;&amp;nbsp; &amp;nbsp; id_depto&lt;br&gt;)M&lt;br&gt;- Departamento (id_depto, nombre, ubicacion)1&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;M:1&lt;br&gt;&lt;p class=&quot;p2&quot; style=&quot;margin: 12px 0px; color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;&quot;&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-1182.5" y="230" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="5PGwkRVWGOZFKhquUbD1-1" value="- Investigador (&lt;u&gt;id_investigador&lt;/u&gt;, nombre, especialidad)&lt;div&gt;&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font&gt;-Investigador_participar_proyecto(&lt;/font&gt;&lt;/span&gt;&lt;u style=&quot;background-color: initial;&quot;&gt;id_investigador,&lt;/u&gt;&lt;u style=&quot;background-color: initial;&quot;&gt;id_proyecto&lt;/u&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif;&quot;&gt;)N:M&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- Proyecto (&lt;u&gt;id_proyecto&lt;/u&gt;, titulo, fecha_inicio, fecha_fin)&lt;br&gt;- Publicacion (&lt;u&gt;id_publicacion&lt;/u&gt;, titulo, revista, año,&lt;u style=&quot;background-color: initial;&quot;&gt;id_proyecto&lt;/u&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;)1:N&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- Financiamiento (&lt;u&gt;id_financiamiento&lt;/u&gt;, fuente, monto)1:1&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1320" y="3000" width="370" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="5PGwkRVWGOZFKhquUbD1-2" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;5&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1630" y="1180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PGwkRVWGOZFKhquUbD1-3" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;4&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1654" y="30" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5PGwkRVWGOZFKhquUbD1-4" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;6&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1630" y="2350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="r1oK2pHlklRxqr9v7Yi9-1" value="- Persona (&lt;u&gt;id_persona&lt;/u&gt;, nombre, fecha_nacimiento)&lt;br&gt;- Estudiante (carrera, semestre) hereda de Persona&lt;br&gt;- Profesor (categoria, especialidad) hereda de Persona&lt;br&gt;- Administrativo (cargo, area) hereda de Persona" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1212.5" y="1540" width="330" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
