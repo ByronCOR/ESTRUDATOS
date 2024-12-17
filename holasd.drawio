@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36" version="25.0.3" pages="3">
   <diagram name="Página-1" id="SwvaVbSk8qbzMh4MLZsh">
-    <mxGraphModel dx="2876" dy="1103" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2514" dy="908" grid="1" gridSize="9" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -179,98 +179,98 @@
           <mxGeometry x="-807" y="1431" width="762" height="740" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-29" value="Curso" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-296" y="2347" width="100" height="40" as="geometry" />
+          <mxGeometry x="-280" y="2428" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-30" value="Estudiantes" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-666" y="2347" width="100" height="40" as="geometry" />
+          <mxGeometry x="-650" y="2428" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-31" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-516" y="2367" as="sourcePoint" />
-            <mxPoint x="-496" y="2367" as="targetPoint" />
+            <mxPoint x="-500" y="2448" as="sourcePoint" />
+            <mxPoint x="-480" y="2448" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-40" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="zQ-pAmUmvUQeuOFQfDti-29" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-376" y="2367" as="sourcePoint" />
-            <mxPoint x="-306" y="2366.5" as="targetPoint" />
+            <mxPoint x="-360" y="2448" as="sourcePoint" />
+            <mxPoint x="-290" y="2447.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-41" value="Inscripcion" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-496" y="2337" width="120" height="60" as="geometry" />
+          <mxGeometry x="-480" y="2418" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-42" value="&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;id_curso&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" parent="1" vertex="1">
-          <mxGeometry x="-132" y="2277" width="100" height="40" as="geometry" />
+          <mxGeometry x="-116" y="2358" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-43" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;nombre_curso&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-132" y="2327" width="100" height="40" as="geometry" />
+          <mxGeometry x="-116" y="2408" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-44" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-42" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-512" y="2327" as="sourcePoint" />
-            <mxPoint x="-196" y="2367" as="targetPoint" />
+            <mxPoint x="-496" y="2408" as="sourcePoint" />
+            <mxPoint x="-180" y="2448" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-45" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-43" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-112" y="2327" as="sourcePoint" />
-            <mxPoint x="-196" y="2367" as="targetPoint" />
+            <mxPoint x="-96" y="2408" as="sourcePoint" />
+            <mxPoint x="-180" y="2448" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-48" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(255, 255, 255);&quot;&gt;duracion&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-132" y="2387" width="100" height="40" as="geometry" />
+          <mxGeometry x="-116" y="2468" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-49" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-48" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="98" y="2317" as="sourcePoint" />
-            <mxPoint x="-196" y="2367" as="targetPoint" />
+            <mxPoint x="114" y="2398" as="sourcePoint" />
+            <mxPoint x="-180" y="2448" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-50" value="&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;id_estudiante&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" parent="1" vertex="1">
-          <mxGeometry x="-808" y="2287" width="100" height="40" as="geometry" />
+          <mxGeometry x="-792" y="2368" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-51" value="&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;nombre&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-808" y="2337" width="100" height="40" as="geometry" />
+          <mxGeometry x="-792" y="2418" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-52" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-50" target="zQ-pAmUmvUQeuOFQfDti-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1188" y="2337" as="sourcePoint" />
-            <mxPoint x="-872" y="2377" as="targetPoint" />
+            <mxPoint x="-1172" y="2418" as="sourcePoint" />
+            <mxPoint x="-856" y="2458" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-53" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-51" target="zQ-pAmUmvUQeuOFQfDti-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-788" y="2337" as="sourcePoint" />
-            <mxPoint x="-872" y="2377" as="targetPoint" />
+            <mxPoint x="-772" y="2418" as="sourcePoint" />
+            <mxPoint x="-856" y="2458" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-54" value="&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; font-size: 16px; text-align: start; background-color: rgb(255, 255, 255);&quot;&gt;email&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-808" y="2387" width="100" height="40" as="geometry" />
+          <mxGeometry x="-792" y="2468" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-55" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-54" target="zQ-pAmUmvUQeuOFQfDti-30" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-578" y="2327" as="sourcePoint" />
-            <mxPoint x="-872" y="2377" as="targetPoint" />
+            <mxPoint x="-562" y="2408" as="sourcePoint" />
+            <mxPoint x="-856" y="2458" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="zQ-pAmUmvUQeuOFQfDti-56" value="&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 20px;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;div&gt;CREATE TABLE Estudiantes (&lt;/div&gt;&lt;div&gt;id_estudiante INT PRIMARY KEY,&amp;nbsp;&lt;/div&gt;&lt;div&gt;nombre VARCHAR(50),&lt;/div&gt;&lt;div&gt;email VARCHAR(50)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CREATE TABLE Curso (&lt;/div&gt;&lt;div&gt;id_curso INT PRIMARY KEY,&lt;/div&gt;&lt;div&gt;nombre_curso VARCHAR(50),&amp;nbsp;&lt;/div&gt;&lt;div&gt;duracion VARCHAR(50)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CREATE TABLE Inscripcion (&lt;/div&gt;&lt;div&gt;id_estudiante INT,&lt;/div&gt;&lt;div&gt;id_curso INT,&lt;/div&gt;&lt;div&gt;fecha_inscripcion DATE,&amp;nbsp;&lt;/div&gt;&lt;div&gt;PRIMARY KEY(id_estudiante, id_curso)&lt;/div&gt;&lt;div&gt;FOREIGN KEY (id_estudiante) REFERENCES Estudiantes(id_estudiante),&lt;/div&gt;&lt;div&gt;FOREIGN KEY (id_curso) REFERENCES Curso(id_curso)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Estudiantes(id_estudiante, nombre, email)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, &#39;nombre&#39;, &#39;email@hot.com&#39;),&lt;/div&gt;&lt;div&gt;(2, &#39;nombre&#39;, &#39;email@hot.com&#39;),&lt;/div&gt;&lt;div&gt;(3, &#39;nombre&#39;, &#39;email@hot.com&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Curso(id_curso, nombre_curso, duracion)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, &#39;nombre curso&#39;, &#39;3 meses&#39;),&lt;/div&gt;&lt;div&gt;(2, &#39;nombre curso&#39;, &#39;3 meses&#39;),&lt;/div&gt;&lt;div&gt;(3, &#39;nombre curso&#39;, &#39;3 meses&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Inscripcion(id_estudiante, id_curso, fecha_inscripcion)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, 1, &#39;2024-12-16&#39;),&lt;/div&gt;&lt;div&gt;(2, 2, &#39;2024-12-16&#39;),&lt;/div&gt;&lt;div&gt;(3, 3, &#39;2024-12-16&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;SELECT * FROM Departamento-;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 20px;&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;div style=&quot;&quot;&gt;SELECT * FROM Profesor;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-807" y="2547" width="774" height="857" as="geometry" />
+        <mxCell id="zQ-pAmUmvUQeuOFQfDti-56" value="&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;div&gt;CREATE TABLE Estudiantes (&lt;/div&gt;&lt;div&gt;id_estudiante INT PRIMARY KEY,&amp;nbsp;&lt;/div&gt;&lt;div&gt;nombre VARCHAR(50),&lt;/div&gt;&lt;div&gt;email VARCHAR(50)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CREATE TABLE Curso (&lt;/div&gt;&lt;div&gt;id_curso INT PRIMARY KEY,&lt;/div&gt;&lt;div&gt;nombre_curso VARCHAR(50),&amp;nbsp;&lt;/div&gt;&lt;div&gt;duracion VARCHAR(50)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;CREATE TABLE Inscripcion (&lt;/div&gt;&lt;div&gt;id_estudiante INT,&lt;/div&gt;&lt;div&gt;id_curso INT,&lt;/div&gt;&lt;div&gt;fecha_inscripcion DATE,&amp;nbsp;&lt;/div&gt;&lt;div&gt;PRIMARY KEY(id_estudiante, id_curso)&lt;/div&gt;&lt;div&gt;FOREIGN KEY (id_estudiante) REFERENCES Estudiantes(id_estudiante),&lt;/div&gt;&lt;div&gt;FOREIGN KEY (id_curso) REFERENCES Curso(id_curso)&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Estudiantes(id_estudiante, nombre, email)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, &#39;nombre&#39;, &#39;email@hot.com&#39;),&lt;/div&gt;&lt;div&gt;(2, &#39;nombre&#39;, &#39;email@hot.com&#39;),&lt;/div&gt;&lt;div&gt;(3, &#39;nombre&#39;, &#39;email@hot.com&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Curso(id_curso, nombre_curso, duracion)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, &#39;nombre curso&#39;, &#39;3 meses&#39;),&lt;/div&gt;&lt;div&gt;(2, &#39;nombre curso&#39;, &#39;3 meses&#39;),&lt;/div&gt;&lt;div&gt;(3, &#39;nombre curso&#39;, &#39;3 meses&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;INSERT INTO Inscripcion(id_estudiante, id_curso, fecha_inscripcion)&lt;/div&gt;&lt;div&gt;VALUES&amp;nbsp;&lt;/div&gt;&lt;div&gt;(1, 1, &#39;2024-12-16&#39;),&lt;/div&gt;&lt;div&gt;(2, 2, &#39;2024-12-16&#39;),&lt;/div&gt;&lt;div&gt;(3, 3, &#39;2024-12-16&#39;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;SELECT * FROM Departamento-;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;&quot; face=&quot;LatoWeb, Lato Extended, Lato, Helvetica Neue, Helvetica, Arial, sans-serif&quot; color=&quot;#2d3b45&quot;&gt;&lt;div style=&quot;&quot;&gt;SELECT * FROM Profesor;&lt;/div&gt;&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-792" y="2583" width="774" height="857" as="geometry" />
         </mxCell>
         <mxCell id="zQ-pAmUmvUQeuOFQfDti-57" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;span style=&quot;color: rgb(45, 59, 69); font-family: LatoWeb, &amp;quot;Lato Extended&amp;quot;, Lato, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif; background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;fecha_inscripcion&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-520.5" y="2450" width="169" height="45" as="geometry" />
+          <mxGeometry x="-504.5" y="2353" width="169" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="zQ-pAmUmvUQeuOFQfDti-58" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-41" target="zQ-pAmUmvUQeuOFQfDti-57" edge="1">
+        <mxCell id="zQ-pAmUmvUQeuOFQfDti-58" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="zQ-pAmUmvUQeuOFQfDti-41" target="zQ-pAmUmvUQeuOFQfDti-57" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-157" y="2549" as="sourcePoint" />
-            <mxPoint x="3" y="2549" as="targetPoint" />
+            <mxPoint x="-141" y="2630" as="sourcePoint" />
+            <mxPoint x="-420" y="2394" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="1gPe5nTMlssKDxIDTyjr" name="Página-2">
-    <mxGraphModel dx="3088" dy="772" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3341" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
