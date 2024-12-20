@@ -718,6 +718,7 @@ dataMap.foreach(goleador=> println(goleador("Jugador")))
 * que estadisticas se usan
 (EDA)
 EDA para datos numericos: min, avg,max, stdDev(desviacion estandar), moda, cuartiles
+EDA para datos no mumericos: conteo de frecuencias
 * */
 
 val listGoles:List[Int]=dataMap
