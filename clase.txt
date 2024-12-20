@@ -686,14 +686,44 @@ name:string)
 val locuo = locura((1.0,1,"string"),"milton")
 loco.tupla._1
 
+
+
 import com.github.tototoshi.csv.*
 import java.io.File
-implicit objet CSVFormatter extends DefaultCSVFormat{
-override val delimiter: Char=';'
+implicit object CSVFormatter extends DefaultCSVFormat {
+  override val delimiter: Char = ';'
 }
-val reader=CSVReaderl.open(new File("c:"))
-reader.all()
+val path2Goleadores:String ="C:\\Users\\utpl\\Downloads\\toptengoleadores.csv"
+val path2Movies:String="C:\\Users\\utpl\\Desktop\\small_pi_movies.csv"
 
+val reader:CSVReader =
+  CSVReader.open(new File(path2Goleadores))
 
-}
-ThisBuild
+/*
+val data: List[List[String]]= reader.all()
+//imprimir las filas (Listas)
+data.foreach(println)
+//imprimir los nombres de los jugadores
+data
+  .slice(1,data.length)
+  .map(row => row(0))
+*/
+//trabajo con map
+val dataMap:List[Map[String,String]]=reader.allWithHeaders()
+//imprimir los datos 
+dataMap.foreach(println)
+//imprimir nombres de jugadores
+dataMap.foreach(goleador=> println(goleador("Jugador")))
+/*analisis exploratorio de datos con estadistica
+* que estadisticas se usan 
+(EDA)
+EDA para datos numericos: min, avg,max, stdDev(desviacion estandar), moda, cuartiles
+* */
+
+val listGoles:List[Int]=dataMap
+  .map(goleador => goleador("Goles").toInt)
+//.map(_.toInt)
+
+println(s"min.: ${listGoles.min}")
+println(s"min.: ${listGoles.max}")
+
