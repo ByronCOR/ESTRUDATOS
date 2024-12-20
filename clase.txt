@@ -685,3 +685,15 @@ tupla:tuple3[douvle, int,string],
 name:string)
 val locuo = locura((1.0,1,"string"),"milton")
 loco.tupla._1
+
+import com.github.tototoshi.csv.*
+import java.io.File
+implicit objet CSVFormatter extends DefaultCSVFormat{
+override val delimiter: Char=';'
+}
+val reader=CSVReaderl.open(new File("c:"))
+reader.all()
+
+
+}
+ThisBuild
