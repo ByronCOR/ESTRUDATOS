@@ -750,3 +750,14 @@ dataMap.foreach(println)
 //imprimir nombres de jugadores
 dataMap.foreach(penales=> println(penales("Penal")))
 */
+trabajo proyecto analiss exploratorio
+realizar una tabla para describir datos  diccionario de datos 
+numero de clulmna:enumeracion desde 0 de izquierda aderecha
+nombrea: nombre de la colulmna 
+tipo de dato: int double string json boolean 
+proposito: que informacion esta en la columna?
+
+tratar de leer el archivo completo (aprox.500MB), SI HAY ERROR TRATAR SOLUCIONARLO.
+realizar una analisis explorartorio de datos 
+numericos max, avg, min, stdDev,mode (una funcion para cada) 
+string y boolean: conteo frecuencias(no JSON)
