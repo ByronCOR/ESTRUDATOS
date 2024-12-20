@@ -687,7 +687,6 @@ val locuo = locura((1.0,1,"string"),"milton")
 loco.tupla._1
 
 
-
 import com.github.tototoshi.csv.*
 import java.io.File
 implicit object CSVFormatter extends DefaultCSVFormat {
@@ -708,14 +707,15 @@ data
   .slice(1,data.length)
   .map(row => row(0))
 */
+
 //trabajo con map
 val dataMap:List[Map[String,String]]=reader.allWithHeaders()
-//imprimir los datos 
+//imprimir los datos
 dataMap.foreach(println)
 //imprimir nombres de jugadores
 dataMap.foreach(goleador=> println(goleador("Jugador")))
 /*analisis exploratorio de datos con estadistica
-* que estadisticas se usan 
+* que estadisticas se usan
 (EDA)
 EDA para datos numericos: min, avg,max, stdDev(desviacion estandar), moda, cuartiles
 * */
@@ -723,11 +723,29 @@ EDA para datos numericos: min, avg,max, stdDev(desviacion estandar), moda, cuart
 val listGoles:List[Int]=dataMap
   .map(goleador => goleador("Goles").toInt)
 //.map(_.toInt)
-
 val sumCount:Tuple2[Double,Int] = listGoles
   .foldLeft((0.0, 0))((t2, currVal) => (t2._1 + currVal, t2._2 + 1))
 println(s"el valor promedio es: ${sumCount._1 / sumCount._2}")
-
 println(s"min.: ${listGoles.min}")
 println(s"min.: ${listGoles.max}")
-
+/*
+//trabajo con map
+val dataMap:List[Map[String,String]]=reader.allWithHeaders()
+//imprimir los datos
+dataMap.foreach(println)
+//imprimir nombres de jugadores
+dataMap.foreach(goleador=> println(goleador("Jugador")))
+val listPenal:List[Int]=dataMap
+  .map(goleador => goleador("Penal").toInt)
+//.map(_.toInt)
+val sumCount:Tuple2[Double,Int] = listPenal
+  .foldLeft((0.0, 0))((t2, currVal) => (t2._1 + currVal, t2._2 + 1))
+println(s"el valor promedio es: ${sumCount._1 / sumCount._2}")
+println(s"min.: ${listPenal.min}")
+println(s"min.: ${listPenal.max}")
+val dataMap:List[Map[String,String]]=reader.allWithHeaders()
+//imprimir los datos
+dataMap.foreach(println)
+//imprimir nombres de jugadores
+dataMap.foreach(penales=> println(penales("Penal")))
+*/
