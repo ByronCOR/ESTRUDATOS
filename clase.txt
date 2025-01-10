@@ -761,3 +761,26 @@ tratar de leer el archivo completo (aprox.500MB), SI HAY ERROR TRATAR SOLUCIONAR
 realizar una analisis explorartorio de datos 
 numericos max, avg, min, stdDev,mode (una funcion para cada) 
 string y boolean: conteo frecuencias(no JSON)
+
+
+val budgets:List{Long]=dataMap
+.flatMap(row=>
+row.get("budget")//List[Option[String]]
+.flatMap(bdgt => scala. util.Try(bdgt.toLong).toOption))//significa un mapa que destruye una estructura entera el optiones un objeto
+
+List(list(1,2),list(3,4),lists(5,6))
+flat Map
+lists(1,2,3,4,5,6)
+
+un monton de errores porqu si no sqabes qu devolver devuelve null porque no sabe que devolver
+Ejemplo
+
+return null:
+created method method()
+car cadena=methor(_
+caena==>null
+cadena. toUpperCase()
+erro exception java. lang. nullpointerException:cannot invoke"string. to upper case():because"RE
+
+UN MECANISMO PARA EVITAR vALORES DE LOSQUE NO WXISTEN
+
