@@ -762,12 +762,15 @@ realizar una analisis explorartorio de datos
 numericos max, avg, min, stdDev,mode (una funcion para cada) 
 string y boolean: conteo frecuencias(no JSON)
 
+val dataMap:List[Map[String,String]]= 
+reader.allWithHeaders()
 
 val budgets:List{Long]=dataMap
 .flatMap(row=>
 row.get("budget")//List[Option[String]]
 .flatMap(bdgt => //List[String]//flat map significa un mapa que destruye una estructura entera el optiones un objeto
-scala. util.Try(bdgt.toLong).toOption))// voy a incluir o ocuparun try  todo lo que puede causar vuna exception al trabajar con un try el error se convierte en un dato que se encapsula
+scala. util.Try(bdgt.toLong).toOption))//List[Option[Long]]
+// voy a incluir o ocuparun try  todo lo que puede causar vuna exception al trabajar con un try el error se convierte en un dato que se encapsula
 
 List(list(1,2),list(3,4),lists(5,6))
 flat Map
@@ -785,3 +788,7 @@ erro exception java. lang. nullpointerException:cannot invoke"string. to upper c
 
 UN MECANISMO PARA EVITAR vALORES DE LOSQUE NO WXISTEN
 
+avg(values:List[Long]):Double=
+al sumCount:Tuple2[Double, Int]-values
+.filter(_-_
+.foldLeft))-/-.-__))t2.cirrVa;_=?
