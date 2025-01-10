@@ -789,6 +789,54 @@ erro exception java. lang. nullpointerException:cannot invoke"string. to upper c
 UN MECANISMO PARA EVITAR vALORES DE LOSQUE NO WXISTEN
 
 avg(values:List[Long]):Double=
-al sumCount:Tuple2[Double, Int]-values
-.filter(_-_
-.foldLeft))-/-.-__))t2.cirrVa;_=?
+val sumCount:Tuple2[Double, Int]-values
+.filter(_ >0)
+.foldLeft((0.0,0))((t2,curVal)=>(t2._1*
+sumCount._1/sumCount._2
+
+
+src main sala new scalqa class/files vamos a darle nombre a ese objeto  objetct
+
+
+
+import scala.util.Try
+import com.github.tototoshi.csv.*
+import java.io.File
+
+object Proyecto {
+@main
+  def generate():Unit = {
+    implicit object CSVFormatter extends DefaultCSVFormat {
+      override val delimiter: Char = ';'
+  }
+    val path2Movies: String = "C:\\Users\\utpl\\Downloads\\pi_movies_complete.csv"
+
+    val reader: CSVReader =
+      CSVReader.open(new File(path2Movies))
+
+    val dataMap: List[Map[String, String]] =
+      reader.allWithHeaders()
+
+    val budgets: List [Long] = dataMap
+    .flatMap (row => row.get ("budget")
+    .flatMap (bdgt => Try (bdgt.toLong).toOption))
+
+  def avg(values: List[Long]) : Double =
+  val sumCount: Tuple2[Double, Int] = values
+    .filter (_ > 0)
+    .foldLeft((0.0, 0))((t2, curVal) => (t2._1 + currVal, t2._2 + 1)
+      sumCount._1 / sumCount._2
+
+  println(s"avg=${avg(budgets)}")
+
+  val listAdult:List[String]= dataMap
+  .flatMap(row => row.get("adult"))
+
+  listAdult
+    .distinct
+  .foreach(println)
+
+  listAdult
+    .groupBy(adlt=>adlt)
+    .groupBy(identity)
+    .map(entry=>(entry._1,entry._2.length))
