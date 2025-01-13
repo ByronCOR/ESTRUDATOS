@@ -840,3 +840,40 @@ object Proyecto {
     .groupBy(adlt=>adlt)
     .groupBy(identity)
     .map(entry=>(entry._1,entry._2.length))
+
+[{'cast_id': 12, 'character': 'Tom', 'credit_id': '52fe4217c3a36847f80035fb', 'gender': 2, 'id': 973, 'name': 'Jason Flemyng', 'order': 0, 'profile_path': '/kzzQoiO3bbi2UeDJL9QtBT5jaQn.jpg'}, {'cast_id': 13, 'character': 'Soap', 'credit_id': '52fe4217c3a36847f80035ff', 'gender': 2, 'id': 974, 'name': 'Dexter Fletcher', 'order': 1, 'profile_path': '/did9anJiAFYvTbeQyNZaxts7GaT.jpg'}
+
+El objetivo del dataset es proporcionar una recopilación organizada de información sobre películas y obtener datos de ella  
+
+SELECT id, 
+  belongs_to_collection,
+	JSON_EXTRACT(REPLACE(belongs_to_collection, "'", "\""), '$.id') AS Id_belongs_to_collection, 
+	JSON_EXTRACT(REPLACE(belongs_to_collection, "'", "\""), '$.name') AS name_belongs_to_collection, 
+	JSON_EXTRACT(REPLACE(belongs_to_collection, "'", "\""), '$.poster_path') AS poster_path_belongs_to_collection, 
+	JSON_EXTRACT(REPLACE(belongs_to_collection, "'", "\""), '$.backdrop_path') AS backdrop_path_belongs_to_collection
+FROM Small01 
+WHERE LENGTH(belongs_to_collection) > 0
+
+"name": "Crime"}]', '$[*].name') AS name_genres
+FROM Small01 ;
+ 
+SELECT id, 
+  genres,
+  JSON_EXTRACT(REPLACE(genres, "'", '"'), '$[*].id') AS id_genres ,
+  JSON_EXTRACT(REPLACE(genres, "'", '"'), '$[*].name') AS name_genres
+FROM Small01 ;
+
+SELECT id, 
+  genres,
+  JSON_EXTRACT(REPLACE(genres, "'", '"'), '$[0].id') AS id_genres ,
+  JSON_EXTRACT(REPLACE(genres, "'", '"'), '$[0].name') AS name_genres
+FROM Small01 ;
+
+# Invalid JSON text in argument 1 to function json_extract: "Missing a comma or ']' after an array element." at position 164.
+
+SELECT id, 
+  	genres,
+	REPLACE(genres, "'", '"') genres_replaced,
+   JSON_VALID(genres)  , 
+   JSON_VALID(REPLACE(genres, "'", '"') )	
+FROM Small01 ;
