@@ -906,6 +906,190 @@ cast JSON,
 crew JSON,
 ratings JSON
 ); 
+
+
+SELECT id,
+       JSON_EXTRACT(genres, '$[0].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[0].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[0].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[1].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[1].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[1].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[2].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[2].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[2].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[3].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[3].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[3].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[4].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[4].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[4].id') IS NOT NULL
    JSON_VALID(genres)  , 
    JSON_VALID(REPLACE(genres, "'", '"') )	
 FROM Small01 ;
+
+
+SELECT s.id AS ID_MOVIE,
+       JSON_EXTRACT(s.genres, CONCAT('$[',idx.i,'].id'))
+FROM Small01 s          
+ JOIN ( SELECT 0 AS i UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 ) idx
+ON idx.i < JSON_LENGTH(s.genres);
+
+
+
+
+clase 
+
+  a  Todos
+# Borrar si existe tabla
+DROP TABLE IF EXISTS Small01 ;
+#Crear una réplica de la tabla y preservar la data original  
+CREATE TABLE Small01 AS
+SELECT * FROM Movies_Small ;
+#Consultar los datos extraidos
+SELECT * FROM Small01;
+#genres <- Arreglo de objetos con el campo id y name
+#Ejemplo del campo genres:  [{'id': 35, 'name': 'Comedy'}, {'id': 80, 'name': 'Crime'}]                                                                                                         
+SELECT id, 
+   genres,
+	 REPLACE(genres, "'", '"') genres_replaced,
+   JSON_VALID(genres)  , 
+   JSON_VALID(REPLACE(genres, "'", '"') )	
+FROM Small01 ;
+#Error detectado luego de remplazar ' por "
+# [{"id": 12, "name": "Adventure"}, {"id": 27, "name": "Horror"}, {"id": 28, "name": "Action"}, {"id": 53, "name": "Thriller"}, {"id": 878, "name": "Science Fiction"}
+
+DAVIDE ALEXANDER MANOTOA  TANDAZO  a  Todos 7:32
+UPDATE moviess
+SET genres = '[{"id": 53, "name": "Thriller"}, {"id": 878, "name": "Science Fiction"}]'
+WHERE genres = '[{"id": 53, "name": "Thriller"}';
+
+LUIS FERNANDO CORDOVA CARRION  a  Todos 7:39
+UPDATE pi_movies_small
+SET genres = CONCAT(genres, ']')
+WHERE genres NOT LIKE '%]' AND id = 100089;
+
+PAULA ALEJANDRA LOPEZ ACARO  a  Todos 7:39
+UPDATE pi_movies_small
+SET genres = CONCAT(genres, ']')
+WHERE id = 100089;
+
+Nelson Piedra | @nopiedra  a  Todos 7:46
+UPDATE Small01
+SET genres = CONCAT(genres, ']')
+WHERE id = 100089;
+
+#Volver a Verificar
+SELECT id, 
+   genres,
+	 REPLACE(genres, "'", '"') genres_replaced,
+   JSON_VALID(genres)  , 
+   JSON_VALID(REPLACE(genres, "'", '"') )	
+FROM Small01 ;
+
+VICENTE ALEXANDER VALDIVIESO JARAMILLO  a  Todos 7:49
+SET SQL_SAFE_UPDATES = 0;
+UPDATE Small01
+SET genres = CONCAT(genres, ']')
+WHERE id = 100089;
+SET SQL_SAFE_UPDATES = 1;
+
+JUAN SEBASTIAN CUEVA VALDIVIESO  a  Todos 7:55
+UPDATE movie_genres
+SET genres = CONCAT(genres, ']')
+WHERE movie_genres.id = 100089;
+
+DIEGO NICOLAY JIMENEZ CARRION  a  Todos 8:00
+UPDATE Small01
+SET genres = REPLACE(genres,'\'','"');
+
+JUAN DIEGO GUERRERO CAMARGO  a  Todos 8:00
+UPDATE small
+SET cast = REPLACE(cast, '\'', '"')
+WHERE small.cast LIKE '%\'%';
+
+Nelson Piedra | @nopiedra  a  Todos 8:06
+SELECT id, 
+  genres,
+  JSON_EXTRACT(genres, '$[0].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[0].name') AS name_genres,  
+  JSON_EXTRACT(genres, '$[1].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[1].name') AS name_genres,  
+  JSON_EXTRACT(genres, '$[2].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[2].name') AS name_genres,  
+  JSON_EXTRACT(genres, '$[3].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[3].name') AS name_genres,  
+  JSON_EXTRACT(genres, '$[4].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[4].name') AS name_genres  
+FROM Small01 ;
+SELECT id, 
+  genres,
+  JSON_EXTRACT(genres, '$[*].id') AS id_genres ,
+  JSON_EXTRACT(genres, '$[*].name') AS name_genres  
+FROM Small01 ;
+
+JUAN DIEGO GUERRERO CAMARGO  a  Todos 8:17
+SELECT id,
+       JSON_EXTRACT(genres, '$[0].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[0].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[0].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[1].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[1].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[1].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[2].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[2].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[2].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[3].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[3].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[3].id') IS NOT NULL
+UNION
+SELECT id,
+       JSON_EXTRACT(genres, '$[4].id') AS id_genres,
+       JSON_EXTRACT(genres, '$[4].name') AS name_genres
+FROM small
+WHERE JSON_EXTRACT(genres, '$[4].id') IS NOT NULL
+
+Nelson Piedra | @nopiedra  a  Todos 8:25
+SELECT id, 
+  genres,
+  JSON_LENGTH (genres)
+FROM Small01 
+ORDER BY 3 DESC ;
+
+Nelson Piedra | @nopiedra  a  Todos 8:32
+SELECT s.id AS ID_MOVIE,
+       JSON_EXTRACT(s.genres, CONCAT('$[',idx.i,'].id'))
+FROM Small01 s          
+ JOIN ( SELECT 0 AS i UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 ) idx
+ON idx.i < JSON_LENGTH(s.genres);
+VERSION FINAL de GENRES
+SELECT s.id AS ID_MOVIE,
+       JSON_EXTRACT(s.genres, CONCAT('$[',idx.i,'].id')) AS id_genre,
+       JSON_UNQUOTE(JSON_EXTRACT(s.genres, CONCAT('$[',idx.i,'].name'))) AS name_genre
+FROM Small01 s          
+ JOIN ( SELECT 0 AS i UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5 UNION SELECT 6 UNION SELECT 7 UNION SELECT 8 UNION SELECT 9 ) idx
+ON idx.i < JSON_LENGTH(s.genres)
+ORDER BY 1 ;
