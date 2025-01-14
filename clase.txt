@@ -874,6 +874,38 @@ FROM Small01 ;
 SELECT id, 
   	genres,
 	REPLACE(genres, "'", '"') genres_replaced,
+
+
+CREATE TABLE movies(
+adult BOOLEAN,
+belong_to_collection JSON,
+budget INT,
+genres JSON,
+homepage VARCHAR(100),
+id INT,
+imdb_id VARCHAR(100),
+original_language VARCHAR(100),
+original_title VARCHAR(100),
+overview VARCHAR(100),
+popularity DECIMAL(10, 0),
+poster_path VARCHAR(100),
+production_companies JSON,
+production_countries JSON,
+release_date DATE,
+revenue DECIMAL(10, 0),
+runtime INT,
+spoken_languagues JSON,
+status VARCHAR(100),
+tagline  VARCHAR(100),
+title  VARCHAR(100),
+video BOOLEAN,
+vote_average DECIMAL(10, 0),
+vote_count INT,
+keywords  VARCHAR(100),
+cast JSON,
+crew JSON,
+ratings JSON
+); 
    JSON_VALID(genres)  , 
    JSON_VALID(REPLACE(genres, "'", '"') )	
 FROM Small01 ;
