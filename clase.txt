@@ -1296,4 +1296,77 @@ object DBDemo {
     }
     query
 }
+import doobie._
+import doobie.implicits._
+import cats.effect._
+import cats.effect.unsafe.implicits.global
 
+case class Actor(id: Int, name: String, lastname: String)
+case class Film(id: Int, title: String, releaseYear: Int, actorList: String)
+case class FilmData(id: Int, title: String, releaseYear: Int, actorList: List[Actor], language: String)
+
+object DatabaseDemo {
+  def main(args: Array[String]): Unit = {
+
+    val xa = Transactor.fromDriverManager[IO](
+      driver = "com.mysql.cj.jdbc.Driver",
+      url = "jdbc:mysql://localhost:3306/movies",
+      user = "root",
+      password = "utpl",
+      logHandler = None
+    )
+
+  CREAR_T().transact(xa).unsafeRunSync()
+    INSERTAR_T().transact(xa).unsafeRunSync()
+
+  
+
+
+  }
+
+  def CREAR_T(): ConnectionIO[Int] =
+    sql"""
+    CREATE TABLE Usuarios(
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    edad INT NOT NULL
+    );"""
+      .update
+      .run
+
+    def INSERTAR_T(): ConnectionIO[Int] =
+      sql"""
+     INSERT INTO Usuarios(id, nombre, edad)
+    VALUES(201,'Andrea',15),
+    (202,'Fernanda',17),
+    (203,'Susana',20);"""
+        .update
+        .run
+
+    def INSERT_T(): ConnectionIO[Int] =
+      sql"""
+    INSERT INTO Usuarios(id, nombre, edad)
+    VALUES(201,'Andrea',15),
+    (202,'Fernanda',17),
+    (203,'Susana',20);"""
+        .update
+        .run
+
+
+
+
+}
+
+ThisBuild / version := "0.1.0-SNAPSHOT"
+
+ThisBuild / scalaVersion := "3.3.4"
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "untitled3clase",
+    libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "2.0.0",
+    libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC5",
+    libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC5",
+    libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.1.0",
+
+  )
