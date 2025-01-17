@@ -1370,3 +1370,83 @@ lazy val root = (project in file("."))
     libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.1.0",
 
   )
+
+import doobie._
+import doobie.implicits._
+import cats.effect._
+import cats.effect.unsafe.implicits.global
+
+case class Actor(id: Int, name: String, lastname: String)
+case class Film(id: Int, title: String, releaseYear: Int, actorList: String)
+case class FilmData(id: Int, title: String, releaseYear: Int, actorList: List[Actor], language: String)
+
+object DatabaseDemo {
+  def main(args: Array[String]): Unit = {
+
+    val xa = Transactor.fromDriverManager[IO](
+      driver = "com.mysql.cj.jdbc.Driver",
+      url = "jdbc:mysql://localhost:3306/movies",
+      user = "root",
+      password = "utpl",
+      logHandler = None
+    )
+
+
+
+    val edad_Max: Option[Int] = MAX_T.transact(xa).unsafeRunSync()
+
+    print(s"min:  $edad_Max")
+
+    val edad_Min: Option[Int] = MIN_T.transact(xa).unsafeRunSync()
+
+    print(s"max:  $edad_Min")
+
+    val edad_Promedio: Option[Double] = AVG_T.transact(xa).unsafeRunSync()
+
+    print(s"promedio:  $edad_Promedio")
+
+  }
+
+
+
+    def INSERTAR_T(id:Int, nombre:String, edad:Int): ConnectionIO[Int] = {
+      sql"""
+     INSERT INTO Usuarios(id, nombre, edad)VALUES($id,$nombre,$edad)
+   """.update
+        .run
+    }
+
+  def MIN_T: ConnectionIO[Option[Int]] =
+    sql"SELECT MIN(edad) FROM usuarios "
+      .query[Int]
+      .option
+
+  def MAX_T: ConnectionIO[Option[Int]] =
+    sql"SELECT MAX(edad) FROM usuarios "
+      .query[Int]
+      .option
+
+
+  def AVG_T: ConnectionIO[Option[Double]] =
+    sql"SELECT AVG(edad) FROM usuarios "
+      .query[Double]
+      .option
+
+
+}
+
+def CREAR_T(): ConnectionIO[Int] ={
+  sql"""
+  CREATE TABLE Usuarios(
+  id INT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  edad INT NOT NULL
+  );"""
+    .update
+    .run
+}
+\
+
+
+CREAR_T().transact(xa).unsafeRunSync()
+
