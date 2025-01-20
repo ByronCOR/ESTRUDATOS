@@ -1446,7 +1446,10 @@ def CREAR_T(): ConnectionIO[Int] ={
     .run
 }
 \
-
+SELECT id, CAST, JSON_VALID(Cast),
+	REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Cast, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}'),
+	REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(Cast, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}'), '=', '"')
+	FROM Movies_Small WHERE id = 100010 ;
 
 CREAR_T().transact(xa).unsafeRunSync()
 
