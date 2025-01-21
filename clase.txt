@@ -1453,3 +1453,33 @@ SELECT id, CAST, JSON_VALID(Cast),
 
 CREAR_T().transact(xa).unsafeRunSync()
 
+
+SELECT id, cast, JSON_VALID(cast) AS is_valid
+FROM movies.pi_movies_completetabla
+WHERE JSON_VALID(cast) = 0;
+
+
+UPDATE movies.pi_movies_completetabla
+SET cast = REPLACE(
+                REPLACE(
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(
+                                REPLACE(cast, ', \'', ', "'),
+                            '{\'', '{"'),
+                        '\': \'', '": "'),
+                    '\': ', '": '),
+                '\', ', '", '),
+            '\'}', '"}')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE movies.pi_movies_completetabla
+SET cast =
+        REPLACE(cast,': None',': "None"')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE movies.pi_movies_completetabla
+SET cast =
+        REPLACE(cast,': ""None""',': "None"')
+WHERE JSON_VALID(cast) = 0;
+
