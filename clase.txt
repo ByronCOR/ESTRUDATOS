@@ -1483,3 +1483,235 @@ SET cast =
         REPLACE(cast,': ""None""',': "None"')
 WHERE JSON_VALID(cast) = 0;
 
+USE moviesmall;
+DROP TABLE IF EXISTS pi_movies_small_copia;
+CREATE TABLE pi_movies_small_copia AS
+SELECT * FROM pi_movies_small;
+
+/*BELONGS_TO_COLLECTION*/
+
+SELECT id, belongs_to_collection, JSON_VALID(belongs_to_collection) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(belongs_to_collection) = 0;
+
+SELECT id, belongs_to_collection, JSON_VALID(belongs_to_collection) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(belongs_to_collection) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET belongs_to_collection = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(belongs_to_collection, ', \'', ', "'),
+                            '{\'', '{"'),
+                        '\': \'', '": "'),
+                    '\': ', '": '),
+                '\', ', '", '),
+            '\'}', '"}')
+WHERE JSON_VALID(belongs_to_collection) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET belongs_to_collection = REPLACE(belongs_to_collection, ': None', ': null')
+WHERE JSON_VALID(belongs_to_collection) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET belongs_to_collection = '{}'
+WHERE JSON_VALID(belongs_to_collection) = 0;
+
+/*KEYWORDS*/
+
+SELECT id, keywords, JSON_VALID(keywords) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(keywords) = 0;
+
+SELECT id, keywords, JSON_VALID(keywords) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(keywords) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET keywords = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(keywords, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(keywords) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET keywords = REPLACE(keywords, '=', '"')
+WHERE JSON_VALID(keywords) = 0;
+
+/*CAST*/
+
+SELECT id, cast, JSON_VALID(cast) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(cast) = 0 AND id = 100042;
+
+SELECT id, cast, JSON_VALID(cast) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(cast, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, '=', '"')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, ': None', ': null')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(cast, ', "', ', ='), '{"', '{='), '": "', '=: ='), '": ', '=: '), '", ', '=, '), '"}', '=}')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, '"', '\'')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, '=', '"')
+WHERE JSON_VALID(cast) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, '"name": "Erin Allin O\'Reilly\'', '"name": "Erin Allin O\'Reilly"')
+WHERE JSON_VALID(cast) = 0
+AND id =100042;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, ', {"cast_id": 76, "character": "Inventor No. 2", "credit_id": "545f72ed0e0a2', ']')
+WHERE JSON_VALID(cast) = 0
+AND id =100042;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET cast = REPLACE(cast, '{"cast_id": 81, "character": "Dancer", "credit_id": "52fe42e5c3a36847f802afe3", "gender": 0, "id": 1172407, "name": "Thea Samuels", "order": 69, "profile_path": null}, {',
+                   '{"cast_id": 81, "character": "Dancer", "credit_id": "52fe42e5c3a36847f802afe3", "gender": 0, "id": 1172407, "name": "Thea Samuels", "order": 69, "profile_path": null}]')
+WHERE JSON_VALID(cast) = 0
+AND id =1018;
+
+/*Para remplazar el valor de la tabla original a la tabla copia por si cometo un error*/
+UPDATE moviesmall.pi_movies_small_copia AS copia
+JOIN moviesmall.pi_movies_small AS original ON copia.id = original.id
+SET copia.cast = original.cast
+WHERE JSON_VALID(original.cast) = 0
+AND copia.id = 1018;
+
+/*CREW*/
+SELECT id, crew, JSON_VALID(crew) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(crew) = 0;
+
+SELECT id, crew, JSON_VALID(crew) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(crew) = 0;
+/*97 errores*/
+UPDATE moviesmall.pi_movies_small_copia
+SET crew = REPLACE(crew, ': None', ': null')
+WHERE JSON_VALID(crew) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET crew = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(cast, ', "', ', ='), '{"', '{='), '": "', '=: ='), '": ', '=: '), '", ', '=, '), '"}', '=}')
+WHERE JSON_VALID(crew) = 0;
+/*91 errores*/
+
+UPDATE moviesmall.pi_movies_small_copia
+SET crew = REPLACE(crew, '=', '"')
+WHERE JSON_VALID(crew) = 0;
+
+/*0 errores*/
+
+/*GENRES*/
+SELECT id, genres, JSON_VALID(genres) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(genres) = 0;
+
+SELECT id, genres, JSON_VALID(genres) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(genres) = 1;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET genres = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(genres, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(genres) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET genres = REPLACE(genres, '=', '"')
+WHERE JSON_VALID(genres) = 0;
+/*0 errores*/
+
+/*PRODUCTION_COMPANIES*/
+
+SELECT id, production_companies, JSON_VALID(production_companies) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(production_companies) = 0;
+
+SELECT id, production_companies, JSON_VALID(production_companies) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(production_companies) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_companies = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(production_companies, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(production_companies) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_companies = REPLACE(production_companies, '=', '"')
+WHERE JSON_VALID(production_companies) = 0;
+
+/*Para remplazar el valor de la tabla original a la tabla copia por si cometo un error*/
+UPDATE moviesmall.pi_movies_small_copia AS copia
+JOIN moviesmall.pi_movies_small AS original ON copia.id = original.id
+SET copia.production_companies = original.production_companies
+WHERE JSON_VALID(original.production_companies) = 0
+AND copia.id = 101362;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_companies = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(production_companies, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(production_companies) = 0 AND id = 101362;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_companies = REPLACE(production_companies, '"', '\'')
+WHERE JSON_VALID(production_companies) = 0 AND id = 101362;
+
+/*PRODUCTION_COUNTRIES*/
+
+SELECT id, production_countries, JSON_VALID(production_countries) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(production_countries) = 0;
+
+SELECT id, production_countries, JSON_VALID(production_countries) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(production_countries) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_countries = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(production_countries, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(production_countries) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_countries = REPLACE(production_countries, '=', '"')
+WHERE JSON_VALID(production_countries) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET production_countries = REPLACE(production_countries, '{"iso_3166_1": "NL", "name": "Netherlands"}, {"iso_3166_1": "DE''', '{"iso_3166_1": "NL", "name": "Netherlands"}]')
+WHERE JSON_VALID(production_countries) = 0 AND id = 101006;
+
+/*SPOKEN_LANGUAGES*/
+
+SELECT id, spoken_languages, JSON_VALID(spoken_languages) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(spoken_languages) = 0;
+
+SELECT id, spoken_languages, JSON_VALID(spoken_languages) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(spoken_languages) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET spoken_languages = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(spoken_languages, ', \'', ', ='), '{\'', '{='), '\': \'', '=: ='), '\': ', '=: '), '\', ', '=, '), '\'}', '=}')
+WHERE JSON_VALID(spoken_languages) = 0;
+
+UPDATE moviesmall.pi_movies_small_copia
+SET spoken_languages = REPLACE(spoken_languages, '=', '"')
+WHERE JSON_VALID(spoken_languages) = 0;
+
+
+/*RATINGS este atributo no presento algun error*/
+
+SELECT id, ratings, JSON_VALID(ratings) AS is_valid
+FROM moviesmall.pi_movies_small
+WHERE JSON_VALID(ratings) = 0;
+
+SELECT id, ratings, JSON_VALID(ratings) AS is_valid
+FROM moviesmall.pi_movies_small_copia
+WHERE JSON_VALID(ratings) = 0;
