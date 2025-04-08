@@ -1712,6 +1712,8 @@ SELECT id, ratings, JSON_VALID(ratings) AS is_valid
 FROM moviesmall.pi_movies_small
 WHERE JSON_VALID(ratings) = 0;
 
+
+//capa de presentcion sepuede presentar mensajes ni en la capada logica no hay j optionpane para presentara
 SELECT id, ratings, JSON_VALID(ratings) AS is_valid
 FROM moviesmall.pi_movies_small_copia
 WHERE JSON_VALID(ratings) = 0;
