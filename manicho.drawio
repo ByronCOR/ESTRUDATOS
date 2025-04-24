@@ -544,10 +544,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Jb1-ri4IYDMzkDiXmox6-1" value="Renta" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-650" y="-100" width="160" height="120" as="geometry" />
+          <mxGeometry x="-590" y="-100" width="220" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="Jb1-ri4IYDMzkDiXmox6-2" value="+ id_renta int PK&lt;div&gt;+ costo_total&amp;nbsp;&lt;div&gt;+ fecha_inicio DATE&lt;/div&gt;&lt;div&gt;+ fecha_fin DATE&lt;/div&gt;&lt;div&gt;+&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="Jb1-ri4IYDMzkDiXmox6-1">
-          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        <mxCell id="Jb1-ri4IYDMzkDiXmox6-2" value="+ id_renta int PK&lt;div&gt;+ costo_total DECIMAL&lt;div&gt;+ fecha_inicio DATE&lt;/div&gt;&lt;div&gt;+ fecha_fin DATE&lt;/div&gt;&lt;div&gt;+ virtual&lt;/div&gt;&lt;div&gt;+ presencial&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="Jb1-ri4IYDMzkDiXmox6-1">
+          <mxGeometry y="50" width="220" height="160" as="geometry" />
         </mxCell>
         <mxCell id="Jb1-ri4IYDMzkDiXmox6-6" value="id_renta" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" vertex="1" parent="1">
           <mxGeometry x="85" y="-558.75" width="100" height="40" as="geometry" />
@@ -568,10 +568,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Jb1-ri4IYDMzkDiXmox6-10" value="Vehiculo" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-416" y="-100" width="236" height="140" as="geometry" />
+          <mxGeometry x="-85" y="-100" width="266" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="Jb1-ri4IYDMzkDiXmox6-11" value="+ id_vehiculo int PK&lt;div&gt;+ capacidad_pasajeros&amp;nbsp; INT&lt;div&gt;+ tipo_combustible VARCHAR(50)&lt;/div&gt;&lt;div&gt;+ precio_dia_renta&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="Jb1-ri4IYDMzkDiXmox6-10">
-          <mxGeometry y="50" width="236" height="90" as="geometry" />
+        <mxCell id="Jb1-ri4IYDMzkDiXmox6-11" value="+ id_vehiculo int PK&lt;div&gt;+ capacidad_pasajeros&amp;nbsp; INT&lt;div&gt;+ tipo_combustible VARCHAR(50)&lt;/div&gt;&lt;div&gt;+ marca VARCHAR(50)&lt;/div&gt;&lt;div&gt;+ categoria&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;VARCHAR(50)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+ precio_dia_renta&lt;/div&gt;&lt;div&gt;+&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="Jb1-ri4IYDMzkDiXmox6-10">
+          <mxGeometry y="50" width="266" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
