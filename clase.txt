@@ -1724,10 +1724,16 @@ desde un usuario A a un Usuario b debo darle permisos
 -------------------------------------
 DBA
 create user_consulta IDENTIFIED by pwdconsulta;
+
 GRANT CONNECT to USR_consulta
 GRANT RESOURSE to USR_consulta
 
-create table prueba1
+alter user hr account unlock;
+alter usr hr IDENDETIFied by pwdhr;
+
+GRANT CREATE VIEW TO usr_consulta;
+
+
 ------------------------------------
 practicaPErmisos
 
@@ -1742,8 +1748,14 @@ DELETE FROM hr.copy_emp
 WHEREemployee_id=999;
 
 rollback;
+
+select *
+from hr.V_EMP1;
+select *
+from hr.V_EMP2;
 ----------------------
 hrUser
+
 from user_tables;
 GRANT SELECT ON employees TO usr_consulta;
 GRANT SELECT, INSERT, UPDATE,DELETE ON copy_emp TO usr_consulta;
@@ -1760,7 +1772,21 @@ select last_name, first_name, job_id
 from employees
 ORDER BY 1;
 
+
+CREATE VIEW v_emp1 AS
+select last_name, first_name, DEPARTMENT_NAME
+from employees e, departments d
+WHERE e.department_id = d.department_id
+ORDER BY 3, 1;
+
+GRANT SELECT ON V_EMP1 TO usr_consulta
+GRANT SELECT ON V_EMP2 TO usr_consulta
+
+una vista se lallama tabla virtual es una forma de ocultar mis datos
 -----------------
+n=2
+ n-1 join
+
 INSERT INTO hr.copy_emp
 VALUES(999,'William','Gietz','WGIETZ",'515.123.8181',
 '07/06/2002','AC_ACCOUNT',*300, null,110);
