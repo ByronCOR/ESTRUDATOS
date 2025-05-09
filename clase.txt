@@ -1717,3 +1717,66 @@ WHERE JSON_VALID(ratings) = 0;
 SELECT id, ratings, JSON_VALID(ratings) AS is_valid
 FROM moviesmall.pi_movies_small_copia
 WHERE JSON_VALID(ratings) = 0;
+
+BASE DE DATOS AVANZADA
+desde un usuario A a un Usuario b debo darle permisos
+1 primero hay que crea un suario usr_consulta
+-------------------------------------
+DBA
+create user_consulta IDENTIFIED by pwdconsulta;
+GRANT CONNECT to USR_consulta
+GRANT RESOURSE to USR_consulta
+
+create table prueba1
+------------------------------------
+practicaPErmisos
+
+select*
+from hr.copy_emp
+where employee_id=999;
+
+UPDATE hr.copy_emp SET first_name ='Ramiro'
+WHERE employe_id
+
+DELETE FROM hr.copy_emp
+WHEREemployee_id=999;
+
+rollback;
+----------------------
+hrUser
+from user_tables;
+GRANT SELECT ON employees TO usr_consulta;
+GRANT SELECT, INSERT, UPDATE,DELETE ON copy_emp TO usr_consulta;
+REVOKE SELECT, INSERT, UPDATE ON copy_emp TO usr_consulta;
+
+CREATE TABLE copy_emp AS
+SELECT*
+FROMemployees;
+drop table copy_emp;
+select* from copy_emp;
+
+CREATE VIEW v_emp1 AS
+select last_name, first_name, job_id
+from employees
+ORDER BY 1;
+
+-----------------
+INSERT INTO hr.copy_emp
+VALUES(999,'William','Gietz','WGIETZ",'515.123.8181',
+'07/06/2002','AC_ACCOUNT',*300, null,110);
+
+
+GRANT SELECT, INSERT, UPDATE ON copy_emp TO usr_consulta;
+GRANT SELECT ON employees TO usr_consulta
+
+
+practicaPErmisos nueva coneccion
+alter user hr account unlock
+alter user hr indetified by bazinga
+SELECT*
+FROM HR.COPY_EMP
+WHERE EMPLOYEE_ID_999;
+
+UPDATE copy_emp SET first_name_ 'Ramiro'
+WHERE employee_id = 999;
+
