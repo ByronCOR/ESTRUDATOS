@@ -679,10 +679,10 @@
             <mxPoint x="-10" y="-2" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0VB6fofLDIln-RIYnoBp-194" value="INVOLUCRAN" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="0VB6fofLDIln-RIYnoBp-194" value="REGISTRA" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-1521" y="1860" width="130" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="0VB6fofLDIln-RIYnoBp-195" value="INVOLUCRAN" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+        <mxCell id="0VB6fofLDIln-RIYnoBp-195" value="CONTIENE" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
           <mxGeometry x="-1181" y="1860" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="0VB6fofLDIln-RIYnoBp-196" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="0VB6fofLDIln-RIYnoBp-195" target="0VB6fofLDIln-RIYnoBp-60">
