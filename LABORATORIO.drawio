@@ -710,7 +710,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0VB6fofLDIln-RIYnoBp-225" value="Inventario_Ingredientes" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="0VB6fofLDIln-RIYnoBp-225" value="Ingredientes" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="-2155" y="1925" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0VB6fofLDIln-RIYnoBp-226" value="id_ingrediente" style="ellipse;whiteSpace=wrap;html=1;align=center;fontStyle=4;" parent="1" vertex="1">
@@ -803,7 +803,7 @@
           <mxGeometry x="-1966" y="2132.2799999999997" width="105" height="70" as="geometry" />
         </mxCell>
         <mxCell id="0VB6fofLDIln-RIYnoBp-251" value="COMPONEN" style="shape=rhombus;perimeter=rhombusPerimeter;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="-1601" y="1910" width="105" height="70" as="geometry" />
+          <mxGeometry x="-1748.83" y="1910" width="105" height="70" as="geometry" />
         </mxCell>
         <mxCell id="0VB6fofLDIln-RIYnoBp-252" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="0VB6fofLDIln-RIYnoBp-251" target="0VB6fofLDIln-RIYnoBp-173" edge="1">
           <mxGeometry relative="1" as="geometry">
