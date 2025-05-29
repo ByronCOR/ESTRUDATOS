@@ -1806,3 +1806,77 @@ WHERE EMPLOYEE_ID_999;
 UPDATE copy_emp SET first_name_ 'Ramiro'
 WHERE employee_id = 999;
 
+
+
+????¡¡
+
+C:\Users\PC\Desktop\respaldos
+
+CREATE USER backups IDENTIEFIED BY pwd123
+GRANT CONNECT, RESOURCE TO backups:
+GRANT EXP_FULL_DATABASE,IMP_FULL_DATABASE TO backups;
+GRANT CREATE ANY DIRECTORY TO backups;
+--vamos a escribir el comando
+exp backups/pwd123
+si queremos utilizar esa cadena de conexión 
+debemos poner
+
+exp backups/pwd123@XE FULL=y FILE=C:\Users\PC\Desktop\respaldos\full_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\full_backup_log.log(esto es en el cmd)
+
+
+Este archivo de LOG contiene información importante sobre la exportación, como:
+
+-Cuándo empezó y terminó el proceso.
+-Qué objetos se exportaron.
+-Si hubo errores o advertencias durante la exportación.
+-Resumen de lo que se hizo.
+
+En resumen, el log sirve para que puedas revisar después si la exportación fue exitosa y detectar posibles problemas.
+
+--full backup
+exp backups/pwd123@XE FULL=y FILE=C:\Users\PC\Desktop\respaldos\full_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\full_backup_log.log
+
+--backup de esquema
+exp backups/pwd123@XE OWNER=HR FILE=C:\Users\PC\Desktop\respaldos\hr_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\hr_backup_log.log STATISTICS=none
+
+--backup de esquema con directorio
+expdp backups/pwd123@XE OWNER=HR DIRECTORY=backup_dir FILE=hr_backup_dir.dmp LOG=hr_backup_dir.log STATISTICS=none
+
+
+-- como obtener  el respaldo de una sola tabla
+exp backups/pwd123@XE TABLES=(HR.LOCATIONS,HR.JOB_HISTORY) FILE=C:\Users\PC\Desktop\respaldos\tables_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\tables_backup_log.log STATISTICS=none
+
+--vamos a restaurar esos respaldos
+
+
+--full backup import
+-- para eso debemos borrar primero la base de datos para importar 
+imp backups/pwd123@XE FULL=y FILE=C:\Users\PC\Desktop\respaldos\full_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\full_backup_imp.log
+
+
+--backup de esquema import
+imp backups/pwd123@XE FROMUSER=HR TOUSER= HR_COPY FILE=C:\Users\PC\Desktop\respaldos\hr_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\hr_backup_imp.log
+
+--vamos a escribir el comando porque necesito crear el esquema poruqe necesito un contenedor  necesito crear un usuario 
+
+CREATE USER hr_copy IDENTIFIED BY pwdhrcopy;
+GRANT CONNECT, RESOURCE TO hr_copy;
+
+select *
+from user_tables;
+
+luego poner el codigo
+
+
+
+-- como importar  el respaldo de una sola tabla
+
+--primero debería borrar para que no salga error
+imp backups/pwd123@XE TABLES=(LOCATIONS) FROMUSER=HR TOUSER=HR_COPY FILE=C:\Users\PC\Desktop\respaldos\tables_backup.dmp LOG=C:\Users\PC\Desktop\respaldos\tables_backup_imp.log STATISTICS=none
+
+pero no hemos creado algún directorio vamos a crear un directori o que nos permita utilizarlo
+
+CREATE OR REPLACE  DIRECTORY backup_dir AS 'C:\Users\PC\Desktop\respaldos';
+GRANT READ, WRITE ON DIRECTORY backup_dir TO backups; 
+
+es un objeto debase de datos y va a apuntar a la carpeta
